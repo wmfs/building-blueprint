@@ -126,7 +126,10 @@
     "isStaffedAtNight": {
       "type": "boolean"
     },
-    "buildingSize": {
+    "footprint": {
+      "type": "string"
+    },
+    "height": {
       "type": "string"
     }
   }
