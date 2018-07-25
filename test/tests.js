@@ -65,7 +65,7 @@ describe('data import', function () {
 
   it('Should be the correct data in the database', function (done) {
     client.query(
-      'select uprn, building_area, building_floors, height_of_building, sprinkler_coverage from wmfs.building order by uprn',
+      'select uprn, building_area, height_of_building, sprinkler_coverage from wmfs.building order by uprn',
       function (err, result) {
         if (err) {
           done(err)
@@ -73,49 +73,42 @@ describe('data import', function () {
           expect(result.rows).to.eql(
             [
               {
-                'building_floors': 2,
                 'building_area': '700.00',
                 'height_of_building': '5.00',
                 'sprinkler_coverage': 100,
                 'uprn': '1234567890'
               },
               {
-                'building_floors': 3,
                 'building_area': '1500.00',
                 'height_of_building': '7.00',
                 'sprinkler_coverage': 75,
                 'uprn': '1234567891'
               },
               {
-                'building_floors': 1,
                 'building_area': '120.00',
                 'height_of_building': '6.00',
                 'sprinkler_coverage': 40,
                 'uprn': '1234567892'
               },
               {
-                'building_floors': 8,
                 'building_area': '1000.00',
                 'height_of_building': '24.00',
                 'sprinkler_coverage': 100,
                 'uprn': '1234567893'
               },
               {
-                'building_floors': 20,
                 'building_area': '1750.00',
                 'height_of_building': '60.00',
                 'sprinkler_coverage': 50,
                 'uprn': '1234567894'
               },
               {
-                'building_floors': 14,
                 'building_area': '12500.00',
                 'height_of_building': '48.00',
                 'sprinkler_coverage': 60,
                 'uprn': '1234567895'
               },
               {
-                'building_floors': 1,
                 'building_area': '350.00',
                 'height_of_building': '10.00',
                 'sprinkler_coverage': 100,
