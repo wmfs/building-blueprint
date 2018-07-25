@@ -10,10 +10,6 @@
       "maxLength": 12,
       "description": "Unique number for each Property Polygon"
     },
-    "address": {
-      "type": "object",
-      "description": "Property address"
-    },
     "premisesUse": {
       "type": "object"
     },
