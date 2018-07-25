@@ -13,9 +13,6 @@
     "premisesUse": {
       "type": "object"
     },
-    "premisesType": {
-      "type": "string"
-    },
     "fsec": {
       "type": "string"
     },
@@ -55,10 +52,6 @@
     "households": {
       "type": "number",
       "description": "Number of households"
-    },
-    "buildingFloors": {
-      "type": "integer",
-      "description": "Number of floors in the building"
     },
     "cqcScore": {
       "type": "string",
