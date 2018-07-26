@@ -1,3 +1,26 @@
+## [1.1.14](https://github.com/wmfs/building-blueprint/compare/v1.1.13...v1.1.14) (2018-07-26)
+
+
+### 🐛 Bug Fixes
+
+* remove sprinklers ([d57d173](https://github.com/wmfs/building-blueprint/commit/d57d173))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-pg-plugin requirement to 1.14.0 ([13a753c](https://github.com/wmfs/building-blueprint/commit/13a753c))
+
+
+### 📦 Code Refactoring
+
+* ordering building model properties so easier to compare with building dna ([2208488](https://github.com/wmfs/building-blueprint/commit/2208488))
+* remove unusued columns ([b9d8771](https://github.com/wmfs/building-blueprint/commit/b9d8771))
+
+
+### 🚨 Tests
+
+* update tests ([8a39072](https://github.com/wmfs/building-blueprint/commit/8a39072))
+
 ## [1.1.13](https://github.com/wmfs/building-blueprint/compare/v1.1.12...v1.1.13) (2018-07-25)
 
 
