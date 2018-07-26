@@ -116,9 +116,6 @@
       "description": "Percentage of sprinkler coverage of the building",
       "type": "integer"
     },
-    "sprinklers": {
-      "type": "string"
-    },
     "uprn": {
       "description": "Unique number for each Property Polygon",
       "maxLength": 12,
