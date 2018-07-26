@@ -5,93 +5,42 @@
     "uprn"
   ],
   "properties": {
-    "uprn": {
-      "type": "integer",
-      "maxLength": 12,
-      "description": "Unique number for each Property Polygon"
-    },
-    "premisesUse": {
-      "type": "object"
-    },
-    "fsec": {
-      "type": "string"
-    },
-    "propertyArea": {
-      "type": "number",
-      "maxLength": 32,
-      "multipleOf": 0.01,
-      "description": "Area in square metresof each Property"
+    "anyFinancialDifficulties": {
+      "type": "boolean"
     },
     "buildingArea": {
-      "type": "number",
+      "description": "Area in square metresof each Building",
       "maxLength": 32,
       "multipleOf": 0.01,
-      "description": "Area in square metresof each Building"
-    },
-    "heightOfBuilding": {
-      "type": "number",
-      "maxLength": 32,
-      "multipleOf": 0.01,
-      "description": "Height of the building"
-    },
-    "sprinklerCoverage": {
-      "type": "integer",
-      "description": "Percentage of sprinkler coverage of the building"
-    },
-    "occupants": {
-      "type": "integer",
-      "description": "Capacity of people the building is holding"
-    },
-    "numBedrooms": {
-      "type": "integer",
-      "description": "Amount of bedrooms the building has"
-    },
-    "compartmentation": {
-      "type": "string"
-    },
-    "households": {
-      "type": "number",
-      "description": "Number of households"
-    },
-    "cqcScore": {
-      "type": "string",
-      "description": "Score imported from CQC data"
-    },
-    "fsaScore": {
-      "type": "string",
-      "description": "Score imported from FSA data"
-    },
-    "shouldBeLicensed": {
-      "type": "boolean"
-    },
-    "lhaOrder": {
-      "type": "boolean"
-    },
-    "ofstedScore": {
-      "type": "string"
-    },
-    "qaaScore": {
-      "type": "string"
-    },
-    "commentsIgnored": {
-      "type": "boolean"
-    },
-    "heritage": {
-      "type": "boolean"
+      "type": "number"
     },
     "comah": {
       "type": "boolean"
     },
+    "commentsIgnored": {
+      "type": "boolean"
+    },
+    "compartmentation": {
+      "type": "string"
+    },
     "connectedToCommercial": {
       "type": "boolean"
     },
-    "isOpenDay": {
-      "type": "boolean"
+    "cqcScore": {
+      "description": "Score imported from CQC data",
+      "type": "string"
     },
-    "isBelowDomestic": {
-      "type": "boolean"
+    "footprint": {
+      "type": "string"
     },
-    "anyFinancialDifficulties": {
+    "fsaScore": {
+      "description": "Score imported from FSA data",
+      "type": "string"
+    },
+    "fsec": {
+      "type": "string"
+    },
+    "hasBuildingRegConsent": {
       "type": "boolean"
     },
     "hasFireAlarm": {
@@ -100,26 +49,80 @@
     "hasMezzanine": {
       "type": "boolean"
     },
-    "hasBuildingRegConsent": {
-      "type": "boolean"
-    },
     "hasOccupiedBasement": {
-      "type": "boolean"
-    },
-    "isOpenAtNight": {
       "type": "boolean"
     },
     "hasSleepingRisk": {
       "type": "boolean"
     },
+    "height": {
+      "type": "string"
+    },
+    "heightOfBuilding": {
+      "description": "Height of the building",
+      "maxLength": 32,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "heritage": {
+      "type": "boolean"
+    },
+    "households": {
+      "description": "Number of households",
+      "type": "number"
+    },
+    "isBelowDomestic": {
+      "type": "boolean"
+    },
+    "isOpenAtNight": {
+      "type": "boolean"
+    },
+    "isOpenDay": {
+      "type": "boolean"
+    },
     "isStaffedAtNight": {
       "type": "boolean"
     },
-    "footprint": {
+    "lhaOrder": {
+      "type": "boolean"
+    },
+    "numBedrooms": {
+      "description": "Amount of bedrooms the building has",
+      "type": "integer"
+    },
+    "occupants": {
+      "description": "Capacity of people the building is holding",
+      "type": "integer"
+    },
+    "ofstedScore": {
       "type": "string"
     },
-    "height": {
+    "premisesUse": {
+      "type": "object"
+    },
+    "propertyArea": {
+      "description": "Area in square metresof each Property",
+      "maxLength": 32,
+      "multipleOf": 0.01,
+      "type": "number"
+    },
+    "qaaScore": {
       "type": "string"
+    },
+    "shouldBeLicensed": {
+      "type": "boolean"
+    },
+    "sprinklerCoverage": {
+      "description": "Percentage of sprinkler coverage of the building",
+      "type": "integer"
+    },
+    "sprinklers": {
+      "type": "string"
+    },
+    "uprn": {
+      "description": "Unique number for each Property Polygon",
+      "maxLength": 12,
+      "type": "integer"
     }
   }
 }
