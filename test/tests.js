@@ -75,43 +75,43 @@ describe('data import', function () {
               {
                 'building_area': '700.00',
                 'height_of_building': '5.00',
-                'sprinkler_coverage': 100,
+                'sprinkler_coverage': '100',
                 'uprn': '1234567890'
               },
               {
                 'building_area': '1500.00',
                 'height_of_building': '7.00',
-                'sprinkler_coverage': 75,
+                'sprinkler_coverage': '75',
                 'uprn': '1234567891'
               },
               {
                 'building_area': '120.00',
                 'height_of_building': '6.00',
-                'sprinkler_coverage': 40,
+                'sprinkler_coverage': '40',
                 'uprn': '1234567892'
               },
               {
                 'building_area': '1000.00',
                 'height_of_building': '24.00',
-                'sprinkler_coverage': 100,
+                'sprinkler_coverage': '100',
                 'uprn': '1234567893'
               },
               {
                 'building_area': '1750.00',
                 'height_of_building': '60.00',
-                'sprinkler_coverage': 50,
+                'sprinkler_coverage': '50',
                 'uprn': '1234567894'
               },
               {
                 'building_area': '12500.00',
                 'height_of_building': '48.00',
-                'sprinkler_coverage': 60,
+                'sprinkler_coverage': '60',
                 'uprn': '1234567895'
               },
               {
                 'building_area': '350.00',
                 'height_of_building': '10.00',
-                'sprinkler_coverage': 100,
+                'sprinkler_coverage': '100',
                 'uprn': '1234567896'
               }
             ]
