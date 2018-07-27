@@ -1,3 +1,15 @@
+## [1.1.15](https://github.com/wmfs/building-blueprint/compare/v1.1.14...v1.1.15) (2018-07-27)
+
+
+### 🐛 Bug Fixes
+
+* change sprinkler coverage to string ([3b37296](https://github.com/wmfs/building-blueprint/commit/3b37296))
+
+
+### 🚨 Tests
+
+* Correct tests now sprinkler coverage is a string ([9f218e9](https://github.com/wmfs/building-blueprint/commit/9f218e9))
+
 ## [1.1.14](https://github.com/wmfs/building-blueprint/compare/v1.1.13...v1.1.14) (2018-07-26)
 
 
