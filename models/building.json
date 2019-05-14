@@ -120,6 +120,39 @@
       "description": "Unique number for each Property Polygon",
       "maxLength": 12,
       "type": "integer"
+    },
+    "occupiedBasement": {
+      "type": "boolean"
+    },
+    "dayHoursOnly": {
+      "type": "boolean"
+    },
+    "noBuildingRegsConsent": {
+      "type": "boolean"
+    },
+    "unstaffedAtNight": {
+      "type": "boolean"
+    },
+    "financialDifficulty": {
+      "type": "boolean"
+    },
+    "fireAlarmPlus": {
+      "type": "boolean"
+    },
+    "noSleeping": {
+      "type": "boolean"
+    },
+    "openAtNight": {
+      "type": "boolean"
+    },
+    "domesticAbove": {
+      "type": "boolean"
+    },
+    "mezzanine": {
+      "type": "boolean"
+    },
+    "sleepingRisk": {
+      "type": "boolean"
     }
   }
 }
