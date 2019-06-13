@@ -5,18 +5,6 @@
     "uprn"
   ],
   "properties": {
-    "anyFinancialDifficulties": {
-      "type": "boolean"
-    },
-    "buildingArea": {
-      "description": "Area in square metresof each Building",
-      "maxLength": 32,
-      "multipleOf": 0.01,
-      "type": "number"
-    },
-    "comah": {
-      "type": "boolean"
-    },
     "commentsIgnored": {
       "type": "boolean"
     },
@@ -46,9 +34,6 @@
     "hasFireAlarm": {
       "type": "boolean"
     },
-    "hasMezzanine": {
-      "type": "boolean"
-    },
     "hasOccupiedBasement": {
       "type": "boolean"
     },
@@ -58,18 +43,8 @@
     "height": {
       "type": "string"
     },
-    "heightOfBuilding": {
-      "description": "Height of the building",
-      "maxLength": 32,
-      "multipleOf": 0.01,
-      "type": "number"
-    },
     "heritage": {
       "type": "boolean"
-    },
-    "households": {
-      "description": "Number of households",
-      "type": "number"
     },
     "isBelowDomestic": {
       "type": "boolean"
@@ -100,11 +75,8 @@
     "premisesUse": {
       "type": "object"
     },
-    "propertyArea": {
-      "description": "Area in square metresof each Property",
-      "maxLength": 32,
-      "multipleOf": 0.01,
-      "type": "number"
+    "publicDefib": {
+      "type": "boolean"
     },
     "qaaScore": {
       "type": "string"
@@ -120,6 +92,9 @@
       "description": "Unique number for each Property Polygon",
       "maxLength": 12,
       "type": "integer"
+    },
+    "maskingNumber": {
+      "type": "string"
     },
     "occupiedBasement": {
       "type": "boolean"
@@ -153,6 +128,13 @@
     },
     "sleepingRisk": {
       "type": "boolean"
+    },
+    "validatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "validatedBy": {
+      "type": "string"
     }
   }
 }
