@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/wmfs/building-blueprint/compare/v1.2.0...v1.2.1) (2019-06-13)
+
+
+### 🐛 Bug Fixes
+
+* align building model with newer building-dna changes ([1ff2e66](https://github.com/wmfs/building-blueprint/commit/1ff2e66))
+* more building model updates ([7871b69](https://github.com/wmfs/building-blueprint/commit/7871b69))
+* update tests ([78c16db](https://github.com/wmfs/building-blueprint/commit/78c16db))
+
 # [1.2.0](https://github.com/wmfs/building-blueprint/compare/v1.1.15...v1.2.0) (2019-05-14)
 
 
