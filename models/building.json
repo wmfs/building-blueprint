@@ -34,9 +34,6 @@
     "hasFireAlarm": {
       "type": "boolean"
     },
-    "hasOccupiedBasement": {
-      "type": "boolean"
-    },
     "hasSleepingRisk": {
       "type": "boolean"
     },
@@ -96,37 +93,13 @@
     "maskingNumber": {
       "type": "string"
     },
-    "occupiedBasement": {
+    "hasOccupiedBasement": {
       "type": "boolean"
     },
-    "dayHoursOnly": {
+    "anyFinancialDifficulty": {
       "type": "boolean"
     },
-    "noBuildingRegsConsent": {
-      "type": "boolean"
-    },
-    "unstaffedAtNight": {
-      "type": "boolean"
-    },
-    "financialDifficulty": {
-      "type": "boolean"
-    },
-    "fireAlarmPlus": {
-      "type": "boolean"
-    },
-    "noSleeping": {
-      "type": "boolean"
-    },
-    "openAtNight": {
-      "type": "boolean"
-    },
-    "domesticAbove": {
-      "type": "boolean"
-    },
-    "mezzanine": {
-      "type": "boolean"
-    },
-    "sleepingRisk": {
+    "hasMezzanine": {
       "type": "boolean"
     },
     "validatedAt": {
