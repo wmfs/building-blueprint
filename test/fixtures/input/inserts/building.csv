@@ -1,4 +1,4 @@
-.uprn,building_area,height_of_building,sprinkler_coverage
+.uprn,footprint,height,sprinkler_coverage
 1234567890,700.00,5.00,100
 1234567891,1500.00,7.00,75
 1234567892,120.00,6.00,40
