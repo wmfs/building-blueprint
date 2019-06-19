@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/wmfs/building-blueprint/compare/v1.2.1...v1.3.0) (2019-06-19)
+
+
+### ✨ Features
+
+* force release ([519edcc](https://github.com/wmfs/building-blueprint/commit/519edcc))
+
 ## [1.2.1](https://github.com/wmfs/building-blueprint/compare/v1.2.0...v1.2.1) (2019-06-13)
 
 
