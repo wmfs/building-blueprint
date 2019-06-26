@@ -1,3 +1,22 @@
+# [1.4.0](https://github.com/wmfs/building-blueprint/compare/v1.3.0...v1.4.0) (2019-06-26)
+
+
+### ✨ Features
+
+* add empty index for module resolution ([4523a8b](https://github.com/wmfs/building-blueprint/commit/4523a8b))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/changelog requirement ([e96b95a](https://github.com/wmfs/building-blueprint/commit/e96b95a))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.77.0 to 1.94.0 ([8c6e634](https://github.com/wmfs/building-blueprint/commit/8c6e634))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-pg-plugin requirement ([330f2f1](https://github.com/wmfs/building-blueprint/commit/330f2f1))
+* **deps-dev:** update codecov requirement from 3.1.0 to 3.5.0 ([2778130](https://github.com/wmfs/building-blueprint/commit/2778130))
+* **deps-dev:** update debug requirement from 4.1.0 to 4.1.1 ([2cd38e6](https://github.com/wmfs/building-blueprint/commit/2cd38e6))
+* **deps-dev:** update mocha requirement from 5.2.0 to 6.1.4 ([ed21283](https://github.com/wmfs/building-blueprint/commit/ed21283))
+* **deps-dev:** update nyc requirement from 13.1.0 to 14.1.1 ([9befd3d](https://github.com/wmfs/building-blueprint/commit/9befd3d))
+* **deps-dev:** update semantic-release requirement ([40f6bee](https://github.com/wmfs/building-blueprint/commit/40f6bee))
+
 # [1.3.0](https://github.com/wmfs/building-blueprint/compare/v1.2.1...v1.3.0) (2019-06-19)
 
 
