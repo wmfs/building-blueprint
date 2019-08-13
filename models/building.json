@@ -83,7 +83,7 @@
     },
     "sprinklerCoverage": {
       "description": "Percentage of sprinkler coverage of the building",
-      "type": "string"
+      "type": "integer"
     },
     "uprn": {
       "description": "Unique number for each Property Polygon",
@@ -96,7 +96,7 @@
     "hasOccupiedBasement": {
       "type": "boolean"
     },
-    "anyFinancialDifficulty": {
+    "anyFinancialDifficulties": {
       "type": "boolean"
     },
     "hasMezzanine": {
