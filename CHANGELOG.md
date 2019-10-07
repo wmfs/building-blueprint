@@ -1,3 +1,33 @@
+## [1.4.1](https://github.com/wmfs/building-blueprint/compare/v1.4.0...v1.4.1) (2019-10-07)
+
+
+### 🐛 Bug Fixes
+
+* remove validated cols ([5b585ed](https://github.com/wmfs/building-blueprint/commit/5b585ed))
+* sprinkler coverage should be int ([6a2500d](https://github.com/wmfs/building-blueprint/commit/6a2500d))
+* sprinkler coverage should be integer ([ea83dc0](https://github.com/wmfs/building-blueprint/commit/ea83dc0))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([0d1ce88](https://github.com/wmfs/building-blueprint/commit/0d1ce88))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([66e22b2](https://github.com/wmfs/building-blueprint/commit/66e22b2))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([ae3708b](https://github.com/wmfs/building-blueprint/commit/ae3708b))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly-pg-plugin requirement ([c71308a](https://github.com/wmfs/building-blueprint/commit/c71308a))
+* **deps-dev:** update dev dependancies ([80e1e0d](https://github.com/wmfs/building-blueprint/commit/80e1e0d))
+* **deps-dev:** update semantic-release requirement ([64a18d4](https://github.com/wmfs/building-blueprint/commit/64a18d4))
+
+
+### 📚 Documentation
+
+* add circleci status [skip ci] ([8b6c800](https://github.com/wmfs/building-blueprint/commit/8b6c800))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** Update CircleCI config - Travis migration ([ddf4b16](https://github.com/wmfs/building-blueprint/commit/ddf4b16))
+* **travis:** remove Travis config ([55a38b4](https://github.com/wmfs/building-blueprint/commit/55a38b4))
+
 # [1.4.0](https://github.com/wmfs/building-blueprint/compare/v1.3.0...v1.4.0) (2019-06-26)
 
 
