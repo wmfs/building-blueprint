@@ -101,13 +101,6 @@
     },
     "hasMezzanine": {
       "type": "boolean"
-    },
-    "validatedAt": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "validatedBy": {
-      "type": "string"
     }
   }
 }
