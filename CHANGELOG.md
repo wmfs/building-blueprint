@@ -1,3 +1,55 @@
+## [1.4.2](https://github.com/wmfs/building-blueprint/compare/v1.4.1...v1.4.2) (2020-01-21)
+
+
+### 🐛 Bug Fixes
+
+* remove audit trigger from models ([f1b80a1](https://github.com/wmfs/building-blueprint/commit/f1b80a1daa25569dfa34d62b050877ca6b6f3618))
+
+
+### 🛠 Builds
+
+* **deps-dev:** add [@semantic-release](https://github.com/semantic-release)/exec ([57ee3ee](https://github.com/wmfs/building-blueprint/commit/57ee3eedd693eda4e5e89dc9f4f1919c1d948ce9))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.4 to 3.0.6 ([2988a2d](https://github.com/wmfs/building-blueprint/commit/2988a2db0419ce7965139cbf4f3254969af46b0b))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/exec from 3.3.7 to 3.3.8 ([004441a](https://github.com/wmfs/building-blueprint/commit/004441a2c83250e81283446b7821a332b4cf1afe))
+* **deps-dev:** bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.16 to 7.0.18 ([f713e12](https://github.com/wmfs/building-blueprint/commit/f713e12c5de04a35cdce27fa1eef6e7defb44d24))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.103.3 to 1.104.0 ([cf647b9](https://github.com/wmfs/building-blueprint/commit/cf647b99d821d9c436bc830b40be67b38a93fade))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.104.0 to 1.105.0 ([860ccdc](https://github.com/wmfs/building-blueprint/commit/860ccdc1c1fe6903661d0dc53f77d502194749a3))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.105.0 to 1.106.0 ([d0545c8](https://github.com/wmfs/building-blueprint/commit/d0545c89ad20de6661768d631bd0de121cc937a0))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.106.0 to 1.107.0 ([4299d40](https://github.com/wmfs/building-blueprint/commit/4299d404ea80e3c7aaa777e98f68b720575a8325))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.107.0 to 1.109.0 ([ef601b6](https://github.com/wmfs/building-blueprint/commit/ef601b64a16fcd3189d9ceff910141b4215d930a))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.109.0 to 1.110.0 ([f131175](https://github.com/wmfs/building-blueprint/commit/f131175bd5b292ef800c515e8bc6794a6f7e6a03))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.94.0 to 1.103.3 ([577ad0b](https://github.com/wmfs/building-blueprint/commit/577ad0b8f73c79b08e0feda547dee7754089c4cc))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.123.0 to 1.137.0 ([c356b39](https://github.com/wmfs/building-blueprint/commit/c356b394410f2f692985e27cbf9efbe15b12d4d0))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.137.0 to 1.138.0 ([57b9bad](https://github.com/wmfs/building-blueprint/commit/57b9bade18b1a644273fe7b858d71327e8897530))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.138.0 to 1.141.0 ([e8506c5](https://github.com/wmfs/building-blueprint/commit/e8506c541201931bcb3929358adcee634bcb8dd4))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.141.0 to 1.142.0 ([032405d](https://github.com/wmfs/building-blueprint/commit/032405d1e87e6be7de1773f3d560d5acfae41908))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.142.0 to 1.143.0 ([66aa0e0](https://github.com/wmfs/building-blueprint/commit/66aa0e078e48a13e13ca68282769ef0b93bc3b04))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.143.0 to 1.144.0 ([14cfdc8](https://github.com/wmfs/building-blueprint/commit/14cfdc802bf9534cbe89b027ef41d3f90d394e35))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.144.0 to 1.146.0 ([040b514](https://github.com/wmfs/building-blueprint/commit/040b514d39509b37d88773b275b470de1811fff7))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.146.0 to 1.147.0 ([da83850](https://github.com/wmfs/building-blueprint/commit/da8385000ab0b5b85de453d8a30250bb605e8775))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.146.0 to 1.148.0 ([1045142](https://github.com/wmfs/building-blueprint/commit/104514233c59a8e78ab7dd0979dc59719530a8a6))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.148.0 to 1.151.0 ([eac301f](https://github.com/wmfs/building-blueprint/commit/eac301f73df45488f5c0d01ae3cdfc8458876750))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-test-helpers from 1.2.0 to 1.4.0 ([4812f75](https://github.com/wmfs/building-blueprint/commit/4812f759e633a9e43eded067b13ab5dbb5c181fa))
+* **deps-dev:** bump conventional-changelog-metahub from 2.0.2 to 3.0.0 ([8d89fd0](https://github.com/wmfs/building-blueprint/commit/8d89fd0213dbed4a4ffdd665b130b6b2b61f9ad4))
+* **deps-dev:** bump conventional-changelog-metahub from 3.0.0 to 4.0.0 ([351817a](https://github.com/wmfs/building-blueprint/commit/351817ad72a8e38c1a0316538545e2b307773534))
+* **deps-dev:** bump mocha from 6.2.0 to 6.2.2 ([f76d977](https://github.com/wmfs/building-blueprint/commit/f76d9778b7e26d6c5efb1167c1445e9fad69693d))
+* **deps-dev:** bump mocha from 6.2.2 to 7.0.0 ([70ceb9a](https://github.com/wmfs/building-blueprint/commit/70ceb9a2cebaaad60b46eae11d6bb338b1b3e1ba))
+* **deps-dev:** bump nyc from 14.1.1 to 15.0.0 ([4f61fd5](https://github.com/wmfs/building-blueprint/commit/4f61fd54f7d261bc2dc7fa0abcf462c8fcaafe36))
+* **deps-dev:** bump semantic-release from 15.13.24 to 15.14.0 ([6fa8f1a](https://github.com/wmfs/building-blueprint/commit/6fa8f1ab0c7539ea20856cf4c0974fcfbbf18b98))
+* **deps-dev:** update codecov requirement from 3.5.0 to 3.6.1 ([ab3c783](https://github.com/wmfs/building-blueprint/commit/ab3c783d362f02b1f332350c6d3d59520977e9b0))
+
+
+### ⚙️ Continuous Integrations
+
+* chmod version_blueprint script ([68a2135](https://github.com/wmfs/building-blueprint/commit/68a21354ab79cf0776654f54d106612cb8875b9f))
+
+
+### ♻️ Chores
+
+* add blueprint version script ([3c50712](https://github.com/wmfs/building-blueprint/commit/3c5071227db2c960570758d01d8d07d46fc76dfc))
+* update semantic-release config ([04e1239](https://github.com/wmfs/building-blueprint/commit/04e1239a7f76c91e78869b012a60158af1be937f))
+* update semantic-release config [ch27] ([d094b2d](https://github.com/wmfs/building-blueprint/commit/d094b2d55993b6bca76c9e037747078b1fde8e18))
+
 ## [1.4.1](https://github.com/wmfs/building-blueprint/compare/v1.4.0...v1.4.1) (2019-10-07)
 
 
