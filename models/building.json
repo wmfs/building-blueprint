@@ -4,6 +4,7 @@
   "primaryKey": [
     "uprn"
   ],
+  "audit": false,
   "properties": {
     "commentsIgnored": {
       "type": "boolean"
