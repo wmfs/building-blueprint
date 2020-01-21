@@ -1,12 +1,12 @@
 {
   "namespace": "wmfs",
   "name": "building-blueprint",
-  "version": "1.0",
-
+  "version": "1.4.2",
   "label": "building-blueprint",
   "author": "Reece Brend",
-
   "organisation": "West Midlands Fire Service",
   "description": "Tymly blueprint for building attributes",
-  "categories": ["gazetteer"]
+  "categories": [
+    "gazetteer"
+  ]
 }
