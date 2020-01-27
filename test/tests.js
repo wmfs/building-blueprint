@@ -73,46 +73,46 @@ describe('data import', function () {
           expect(result.rows).to.eql(
             [
               {
-                'footprint': '700.00',
-                'height': '5.00',
-                'sprinkler_coverage': 100,
-                'uprn': '1234567890'
+                footprint: '700.00',
+                height: '5.00',
+                sprinkler_coverage: 100,
+                uprn: '1234567890'
               },
               {
-                'footprint': '1500.00',
-                'height': '7.00',
-                'sprinkler_coverage': 75,
-                'uprn': '1234567891'
+                footprint: '1500.00',
+                height: '7.00',
+                sprinkler_coverage: 75,
+                uprn: '1234567891'
               },
               {
-                'footprint': '120.00',
-                'height': '6.00',
-                'sprinkler_coverage': 40,
-                'uprn': '1234567892'
+                footprint: '120.00',
+                height: '6.00',
+                sprinkler_coverage: 40,
+                uprn: '1234567892'
               },
               {
-                'footprint': '1000.00',
-                'height': '24.00',
-                'sprinkler_coverage': 100,
-                'uprn': '1234567893'
+                footprint: '1000.00',
+                height: '24.00',
+                sprinkler_coverage: 100,
+                uprn: '1234567893'
               },
               {
-                'footprint': '1750.00',
-                'height': '60.00',
-                'sprinkler_coverage': 50,
-                'uprn': '1234567894'
+                footprint: '1750.00',
+                height: '60.00',
+                sprinkler_coverage: 50,
+                uprn: '1234567894'
               },
               {
-                'footprint': '12500.00',
-                'height': '48.00',
-                'sprinkler_coverage': 60,
-                'uprn': '1234567895'
+                footprint: '12500.00',
+                height: '48.00',
+                sprinkler_coverage: 60,
+                uprn: '1234567895'
               },
               {
-                'footprint': '350.00',
-                'height': '10.00',
-                'sprinkler_coverage': 100,
-                'uprn': '1234567896'
+                footprint: '350.00',
+                height: '10.00',
+                sprinkler_coverage: 100,
+                uprn: '1234567896'
               }
             ]
           )
@@ -124,7 +124,7 @@ describe('data import', function () {
 
   it('Should be clean up the database', function (done) {
     client.query(
-      `DELETE FROM wmfs.building WHERE uprn::text LIKE '123456789%';`,
+      'DELETE FROM wmfs.building WHERE uprn::text LIKE \'123456789%\';',
       function (err, result) {
         if (err) {
           done(err)
