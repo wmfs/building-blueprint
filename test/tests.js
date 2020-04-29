@@ -23,8 +23,8 @@ describe('data import', function () {
     }
   })
 
-  it('should startup tymly', function (done) {
-    tymly.boot(
+  it('startup tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           require.resolve('@wmfs/tymly-pg-plugin'),
@@ -34,123 +34,99 @@ describe('data import', function () {
           path.resolve(__dirname, './../')
         ],
         config: {}
-      },
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        statebox = tymlyServices.statebox
-        client = tymlyServices.storage.client
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    statebox = tymlyServices.statebox
+    client = tymlyServices.storage.client
   })
 
-  it('should create and populate the wmfs.building database table', function (done) {
-    statebox.startExecution(
+  it('create and populate the wmfs.building table', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         sourceDir: path.resolve(__dirname, './fixtures/input')
       }, // input
       STATE_MACHINE_NAME, // state machine name
       {
         sendResponse: 'COMPLETE'
-      }, // options
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.currentStateName).to.eql('ImportingCsvFiles')
-        done()
-      }
+      } // options
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.currentStateName).to.eql('ImportingCsvFiles')
   })
 
-  it('Should be the correct data in the database', function (done) {
-    client.query(
-      'select uprn, footprint, height, sprinkler_coverage from wmfs.building order by uprn',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rows).to.eql(
-            [
-              {
-                footprint: '700.00',
-                height: '5.00',
-                sprinkler_coverage: 100,
-                uprn: '1234567890'
-              },
-              {
-                footprint: '1500.00',
-                height: '7.00',
-                sprinkler_coverage: 75,
-                uprn: '1234567891'
-              },
-              {
-                footprint: '120.00',
-                height: '6.00',
-                sprinkler_coverage: 40,
-                uprn: '1234567892'
-              },
-              {
-                footprint: '1000.00',
-                height: '24.00',
-                sprinkler_coverage: 100,
-                uprn: '1234567893'
-              },
-              {
-                footprint: '1750.00',
-                height: '60.00',
-                sprinkler_coverage: 50,
-                uprn: '1234567894'
-              },
-              {
-                footprint: '12500.00',
-                height: '48.00',
-                sprinkler_coverage: 60,
-                uprn: '1234567895'
-              },
-              {
-                footprint: '350.00',
-                height: '10.00',
-                sprinkler_coverage: 100,
-                uprn: '1234567896'
-              }
-            ]
-          )
-          done()
+  it('verify data in the table', async () => {
+    const result = await client.query(
+      'select uprn, footprint, height, sprinkler_coverage from wmfs.building order by uprn'
+    )
+
+    expect(result.rows).to.eql(
+      [
+        {
+          footprint: '700.00',
+          height: '5.00',
+          sprinkler_coverage: 100,
+          uprn: '1234567890'
+        },
+        {
+          footprint: '1500.00',
+          height: '7.00',
+          sprinkler_coverage: 75,
+          uprn: '1234567891'
+        },
+        {
+          footprint: '120.00',
+          height: '6.00',
+          sprinkler_coverage: 40,
+          uprn: '1234567892'
+        },
+        {
+          footprint: '1000.00',
+          height: '24.00',
+          sprinkler_coverage: 100,
+          uprn: '1234567893'
+        },
+        {
+          footprint: '1750.00',
+          height: '60.00',
+          sprinkler_coverage: 50,
+          uprn: '1234567894'
+        },
+        {
+          footprint: '12500.00',
+          height: '48.00',
+          sprinkler_coverage: 60,
+          uprn: '1234567895'
+        },
+        {
+          footprint: '350.00',
+          height: '10.00',
+          sprinkler_coverage: 100,
+          uprn: '1234567896'
         }
-      }
+      ]
     )
   })
 
-  it('Should be clean up the database', function (done) {
-    client.query(
-      'DELETE FROM wmfs.building WHERE uprn::text LIKE \'123456789%\';',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rowCount).to.eql(7)
-          done()
-        }
-      }
+  it('clean up the table', async () => {
+    const result = await client.query(
+      'DELETE FROM wmfs.building WHERE uprn::text LIKE \'123456789%\';'
     )
+
+    expect(result.rowCount).to.eql(7)
   })
 
-  it('Should find a now empty database', function (done) {
-    client.query(
-      'select * from wmfs.building;',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rows).to.eql([])
-          done()
-        }
-      }
+  it('verify empty table', async () => {
+    const result = await client.query(
+      'select * from wmfs.building;'
     )
+
+    expect(result.rows).to.eql([])
   })
 
-  it('should shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
