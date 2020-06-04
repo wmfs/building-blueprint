@@ -58,14 +58,14 @@ workflows:
   version: 2
   test_and_release:
     jobs:
-      - unit test:
-          context: tymly_global
-      - lint
-      - release:
-          context: tymly_global
-          requires:
-            - unit test
-            - lint
+    - unit test:
+        context: tymly_global
+    - lint
+    - release:
+        context: tymly_global
+        requires:
+        - unit test
+        - lint
         filters:
           branches:
             only: master
