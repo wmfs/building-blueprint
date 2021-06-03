@@ -102,6 +102,9 @@
     },
     "hasMezzanine": {
       "type": "boolean"
+    },
+    "externalSource": {
+      "type": "string"
     }
   }
 }
