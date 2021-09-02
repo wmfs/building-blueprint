@@ -1,0 +1,24 @@
+{
+  "StartAt": "FindBuilding",
+  "States": {
+    "FindBuilding": {
+      "Type": "Task",
+      "InputPath": "$.uprn",
+      "Resource": "module:finding",
+      "ResourceConfig": {
+        "modelId": "building"
+      },
+      "ResultPath": "$.building",
+      "Next": "FormatBuildingResults"
+    },
+    "FormatBuildingResults": {
+      "Type": "Pass",
+      "Parameters": {
+        "key": "building",
+        "value.$": "$.building"
+      },
+      "ResultPath": "$",
+      "End": true
+    }
+  }
+}
