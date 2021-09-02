@@ -1,0 +1,232 @@
+{
+  "type": "Collapsible",
+  "title": "Building",
+  "card": {
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "FactSet",
+        "showWhen": "data.building",
+        "facts": [
+          {
+            "title": "Construction Type",
+            "value": "{{data.building.constructionType}}"
+          },
+          {
+            "title": "Domestic or not?",
+            "value": "{{data.building.isDomesticOrNonDomestic}}"
+          },
+          {
+            "title": "Res non res?",
+            "value": "{{data.building.resNonres}}"
+          },
+          {
+            "title": "Date of Primary Source",
+            "value": "{{data.building.dateOfPrimarySource}}"
+          },
+          {
+            "title": "Date of Revision",
+            "value": "{{data.building.dateOfRevision}}"
+          },
+          {
+            "title": "FSEC",
+            "value": "{{data.building.fsec}}"
+          },
+          {
+            "title": "Sprinkler Coverage",
+            "value": "{{data.building.sprinklerCoverage}}{{data.building.sprinklerCoverage !== null ? '%' : ''}}"
+          },
+          {
+            "title": "Occupants",
+            "value": "{{data.building.occupants}}"
+          },
+          {
+            "title": "Number of Bedrooms",
+            "value": "{{data.building.numBedrooms}}"
+          },
+          {
+            "title": "Compartmentation",
+            "value": "{{data.building.compartmentation}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
+            }
+          },
+          {
+            "title": "Households",
+            "value": "{{data.building.households}}"
+          },
+          {
+            "title": "Building class text",
+            "value": "{{data.building.buildingClassText}}"
+          },
+          {
+            "title": "Building Sub Structure",
+            "value": "{{data.building.buildingSubStructure}}"
+          },
+          {
+            "title": "Building SS Text",
+            "value": "{{data.building.buildingSsText}}"
+          },
+          {
+            "title": "Building Roof Type",
+            "value": "{{data.building.buildingRoofType}}"
+          },
+          {
+            "title": "Building RT Text",
+            "value": "{{data.building.buildingRtText}}"
+          },
+          {
+            "title": "Building Wall Type",
+            "value": "{{data.building.buildingWallType}}"
+          },
+          {
+            "title": "Building Wall Type Text",
+            "value": "{{data.building.buildingWallTypeText}}"
+          },
+          {
+            "title": "Building Age",
+            "value": "{{data.building.buildingAge}}"
+          },
+          {
+            "title": "Building Age Text",
+            "value": "{{data.building.buildingAgeText}}"
+          },
+          {
+            "title": "Building Use Code",
+            "value": "{{data.building.buildingUseCode}}"
+          },
+          {
+            "title": "Building Use Text",
+            "value": "{{data.building.buildingUseText}}"
+          },
+          {
+            "title": "Building Floors",
+            "value": "{{data.building.buildingFloors}}"
+          },
+          {
+            "title": "Building Floor Text",
+            "value": "{{data.building.buildingFloorText}}"
+          },
+          {
+            "title": "Quality Code",
+            "value": "{{data.building.qualityCode}}"
+          },
+          {
+            "title": "Base",
+            "value": "{{data.building.base}}"
+          },
+          {
+            "title": "Known building date",
+            "value": "{{data.building.knownBuildingDate}}"
+          },
+          {
+            "title": "CQC score",
+            "value": "{{data.building.cqcScore}}"
+          },
+          {
+            "title": "FSA score",
+            "value": "{{data.building.fsaScore}}"
+          },
+          {
+            "title": "Should be licensed?",
+            "value": "{{data.building.shouldBeLicensed}}"
+          },
+          {
+            "title": "LHA Order",
+            "value": "{{data.building.lhaOrder}}"
+          },
+          {
+            "title": "OFSTED score",
+            "value": "{{data.building.ofstedScore}}"
+          },
+          {
+            "title": "QAA score",
+            "value": "{{data.building.qaaScore}}"
+          },
+          {
+            "title": "comments ignored",
+            "value": "{{data.building.commentsIgnored}}"
+          },
+          {
+            "title": "Is heritage building?",
+            "value": "{{data.building.heritage}}"
+          },
+          {
+            "title": "COMAH",
+            "value": "{{data.building.comah}}"
+          },
+          {
+            "title": "Connect to commercial",
+            "value": "{{data.building.connectedToCommerical}}"
+          },
+          {
+            "title": "Is open day?",
+            "value": "{{data.building.isOpenDay}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
+            }
+          },
+          {
+            "title": "Is below domestic?",
+            "value": "{{data.building.isBelowDomestic}}"
+          },
+          {
+            "title": "Any financial difficulties?",
+            "value": "{{data.building.anyFinancialDifficulties}}"
+          },
+          {
+            "title": "Has fire alarm?",
+            "value": "{{data.building.hasFireAlarm}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
+            }
+          },
+          {
+            "title": "Has mezzanine?",
+            "value": "{{data.building.hasMezzanine}}"
+          },
+          {
+            "title": "Has building reg consent?",
+            "value": "{{data.building.hasBuildingRegConsent}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
+            }
+          },
+          {
+            "title": "Has occupied basement?",
+            "value": "{{data.building.hasOccupiedBasement}}"
+          },
+          {
+            "title": "Open at night?",
+            "value": "{{data.building.isOpenAtNight}}"
+          },
+          {
+            "title": "Has sleeping risk?",
+            "value": "{{data.building.hasSleepingRisk}}"
+          },
+          {
+            "title": "Staffed at night?",
+            "value": "{{data.building.isStaffedAtNight}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
+            }
+          },
+          {
+            "title": "Footprint",
+            "value": "{{data.building.footprint}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:footprint"
+            }
+          },
+          {
+            "title": "Height/Floors",
+            "value": "{{data.building.height}}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:height"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
