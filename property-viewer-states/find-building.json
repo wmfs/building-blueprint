@@ -4,7 +4,7 @@
     "FindBuilding": {
       "Type": "Task",
       "InputPath": "$.uprn",
-      "Resource": "module:finding",
+      "Resource": "module:findingById",
       "ResourceConfig": {
         "modelId": "building"
       },
