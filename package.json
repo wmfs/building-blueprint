@@ -35,10 +35,7 @@
     "@semantic-release/exec": "5.0.0",
     "@wmfs/tymly": "1.212.3",
     "@wmfs/tymly-pg-plugin": "1.256.0",
-    "@wmfs/tymly-test-helpers": "1.8.0",
-    "@wmfs/gazetteer-property-blueprint": "1.0.0",
-    "@wmfs/gazetteer-blueprint": "1.34.0",
-    "@wmfs/addressbase-premium-blueprint": "1.188.1"
+    "@wmfs/tymly-test-helpers": "1.9.0"
   },
   "scripts": {
     "lint": "standard",

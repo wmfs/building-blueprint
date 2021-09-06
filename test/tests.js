@@ -32,9 +32,7 @@ describe('data import', function () {
         ],
         blueprintPaths: [
           path.resolve(__dirname, './../'),
-          require.resolve('@wmfs/gazetteer-property-blueprint'),
-          require.resolve('@wmfs/gazetteer-blueprint'),
-          require.resolve('@wmfs/addressbase-premium-blueprint')
+          require.resolve('@wmfs/tymly-test-helpers/blueprints/mock-gazetteer-property-blueprint')
         ],
         config: {}
       }
