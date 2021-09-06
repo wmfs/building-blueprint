@@ -31,7 +31,8 @@ describe('data import', function () {
           path.resolve(__dirname, '../node_modules/@wmfs/tymly-test-helpers/plugins/allow-everything-rbac-plugin')
         ],
         blueprintPaths: [
-          path.resolve(__dirname, './../')
+          path.resolve(__dirname, './../'),
+          require.resolve('@wmfs/gazetteer-property-blueprint')
         ],
         config: {}
       }
