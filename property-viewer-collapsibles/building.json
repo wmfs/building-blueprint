@@ -226,6 +226,11 @@
             }
           }
         ]
+      },
+      {
+        "type": "TextBlock",
+        "showWhen": "!data.building",
+        "text": "No building record for this property"
       }
     ]
   }
