@@ -32,7 +32,8 @@ describe('data import', function () {
         ],
         blueprintPaths: [
           path.resolve(__dirname, './../'),
-          require.resolve('@wmfs/gazetteer-property-blueprint')
+          require.resolve('@wmfs/gazetteer-property-blueprint'),
+          require.resolve('@wmfs/gazetteer-blueprint')
         ],
         config: {}
       }

@@ -36,7 +36,8 @@
     "@wmfs/tymly": "1.212.3",
     "@wmfs/tymly-pg-plugin": "1.256.0",
     "@wmfs/tymly-test-helpers": "1.8.0",
-    "@wmfs/gazetteer-property-blueprint": "1.0.0"
+    "@wmfs/gazetteer-property-blueprint": "1.0.0",
+    "@wmfs/gazetteer-blueprint": "1.33.5"
   },
   "scripts": {
     "lint": "standard",
