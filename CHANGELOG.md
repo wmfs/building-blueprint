@@ -1,3 +1,57 @@
+# [1.6.0](https://github.com/wmfs/building-blueprint/compare/v1.5.0...v1.6.0) (2021-09-06)
+
+
+### ✨ Features
+
+* add [@wmfs](https://github.com/wmfs)/gazetteer-blueprint to the tests ([8c96290](https://github.com/wmfs/building-blueprint/commit/8c962904459c9298ec7f8ba562bcb5c40d962d6b))
+* add [@wmfs](https://github.com/wmfs)/gazetteer-property-blueprint for the tests ([1720d9f](https://github.com/wmfs/building-blueprint/commit/1720d9f2191ad9fb80ef01b22947f3533664cc8f))
+* property viewer collapsible for building record ([7fe8bd4](https://github.com/wmfs/building-blueprint/commit/7fe8bd49f17127fa915e2486b37b91e6e0c9aa44))
+* property viewer state to find building ([c85a478](https://github.com/wmfs/building-blueprint/commit/c85a4782fb057c9f356daa93542c7cb3e61c4d22))
+
+
+### 🐛 Bug Fixes
+
+* add text for missing content ([dfdf24e](https://github.com/wmfs/building-blueprint/commit/dfdf24ec1bf60d4c5221e5c914c04cc4d2e49b07))
+* finding by id resource ([67214c6](https://github.com/wmfs/building-blueprint/commit/67214c6ee7a102de4048dcb6078542274b2e1134))
+
+
+### 🛠 Builds
+
+* **deps:** add [@wmfs](https://github.com/wmfs)/addressbase-premium-blueprint to the tests ([7bce5b4](https://github.com/wmfs/building-blueprint/commit/7bce5b4fc8bf7e5e1a319affacc8e1baa476924c))
+* **deps:** update [@wmfs](https://github.com/wmfs)/gazetteer-blueprint to 1.34.0 ([9b3d5f7](https://github.com/wmfs/building-blueprint/commit/9b3d5f7e87b5978353c7309d48ca59f2cbf9a914))
+* **deps:** update [@wmfs](https://github.com/wmfs)/tymly-test-helpers to 1.9.1 ([491c61f](https://github.com/wmfs/building-blueprint/commit/491c61faf94c125872af542cfab18db98cb800fa))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.209.0 to 1.210.0 ([9baae53](https://github.com/wmfs/building-blueprint/commit/9baae539953fd0b15143a48a0c50a51632caf4a5))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.210.0 to 1.211.0 ([d22f00c](https://github.com/wmfs/building-blueprint/commit/d22f00c225f8a92f2d9241d87605c833216f1070))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly from 1.211.0 to 1.212.0 ([d3596fc](https://github.com/wmfs/building-blueprint/commit/d3596fc6450d250f6f6ebff3c5c821be3b170e30))
+* **deps-dev:** bump [@wmfs](https://github.com/wmfs)/tymly-pg-plugin from 1.252.0 to 1.253.0 ([ffee854](https://github.com/wmfs/building-blueprint/commit/ffee85436241289f2b68de92021f3f7884a701d3))
+* **deps-dev:** bump codecov from 3.8.2 to 3.8.3 ([544e103](https://github.com/wmfs/building-blueprint/commit/544e1038449116105327bb21c3dfbebbb42505e4))
+* **deps-dev:** bump debug from 4.3.1 to 4.3.2 ([3467cc4](https://github.com/wmfs/building-blueprint/commit/3467cc498d10934508fceae86dace3a612f0ba87))
+* **deps-dev:** bump mocha from 8.4.0 to 9.0.0 ([79b4219](https://github.com/wmfs/building-blueprint/commit/79b4219364389c6b9709da3f5a4655d43eba1ef8))
+* **deps-dev:** bump mocha from 9.0.0 to 9.0.1 ([6bcfc79](https://github.com/wmfs/building-blueprint/commit/6bcfc79aa492d05ea1aa3797a87af847e1e66413))
+* **deps-dev:** bump mocha from 9.0.1 to 9.0.2 ([424ba80](https://github.com/wmfs/building-blueprint/commit/424ba80404bf6b66496fad6b44217e70b8437d2f))
+* **deps-dev:** bump mocha from 9.0.2 to 9.0.3 ([0de6667](https://github.com/wmfs/building-blueprint/commit/0de66670943b542107f4046bbd2cb964629f7ad4))
+* **deps-dev:** bump semantic-release from 17.4.3 to 17.4.4 ([292cd6e](https://github.com/wmfs/building-blueprint/commit/292cd6e57d96b4e40a643a0e091408b7a663ba42))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v9.0.1 ([f187427](https://github.com/wmfs/building-blueprint/commit/f1874270db8b89c11a4167a394dd8289f427cdd5))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.2 ([52d2853](https://github.com/wmfs/building-blueprint/commit/52d28536b6437bfffa9e4965605a129509f9b8f1))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.3 ([3b2ce49](https://github.com/wmfs/building-blueprint/commit/3b2ce494f3f9ca45368106a2cd3f16f2f8660ec8))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.255.0 ([386d578](https://github.com/wmfs/building-blueprint/commit/386d578043f628ab01cbc7fcc1d982f28e95da6e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.256.0 ([4704f1c](https://github.com/wmfs/building-blueprint/commit/4704f1cbe10ad325a0426671268471ebe6dd0c51))
+* **deps-dev:** update dependency mocha to v9.1.0 ([e9f666a](https://github.com/wmfs/building-blueprint/commit/e9f666a268ad6d900760561ef8ace5721fb7e741))
+* **deps-dev:** update dependency mocha to v9.1.1 ([142b1c1](https://github.com/wmfs/building-blueprint/commit/142b1c1aa4704d0b1786724de9fdbbc7f138dd8f))
+* **deps-dev:** update dependency semantic-release to v17.4.5 ([1149a4b](https://github.com/wmfs/building-blueprint/commit/1149a4b3497a7a17ddc1bdedd8f415e8134dadbc))
+* **deps-dev:** update dependency semantic-release to v17.4.6 ([c6dcb71](https://github.com/wmfs/building-blueprint/commit/c6dcb71362685fbbd9322bec800a0089f059634d))
+* **deps-dev:** update dependency semantic-release to v17.4.7 ([3ca1866](https://github.com/wmfs/building-blueprint/commit/3ca1866d02c9b04e1dae29a45dd4f966f4561848))
+
+
+### 🚨 Tests
+
+* use tymly-test-helpers for mock gazetteer-property-blueprint ([e054ad8](https://github.com/wmfs/building-blueprint/commit/e054ad84f75976aeecdc7e4bf901ccfa121de9f8))
+
+
+### ♻️ Chores
+
+* add renovate config [ch6600] ([1aa840a](https://github.com/wmfs/building-blueprint/commit/1aa840ae8e908811aa82818397c7a2f2d63dc385))
+
 # [1.5.0](https://github.com/wmfs/building-blueprint/compare/v1.4.2...v1.5.0) (2021-06-03)
 
 
