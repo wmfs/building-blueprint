@@ -2,7 +2,7 @@ const RangeMap = {
   smallRangedFsec: [
     'OTHER_SLEEPING',
     'SHOP',
-    'PUBLIC_BUILDING-OTHER',
+    'PUBLIC_BUILDING_OTHER',
     'FACTORY',
     'OTHER_WORKPLACE'
   ],
