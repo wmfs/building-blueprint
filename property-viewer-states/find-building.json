@@ -9,6 +9,77 @@
         "modelId": "building"
       },
       "ResultPath": "$.building",
+      "Next": "SmallRangesType"
+    },
+    "SmallRangesType": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Or": [
+            {
+              "Variable": "$.building.fsec",
+              "StringEquals": "other-sleeping"
+            },
+            {
+              "Variable": "$.building.fsec",
+              "StringEquals": "shop"
+            },
+            {
+              "Variable": "$.building.fsec",
+              "StringEquals": "public-building-other"
+            },
+            {
+              "Variable": "$.building.fsec",
+              "StringEquals": "factory"
+            },
+            {
+              "Variable": "$.building.fsec",
+              "StringEquals": "other-workplace"
+            }
+          ],
+          "Next": "MaxSmallRanges"
+        }
+      ],
+      "Default": "SetOccupancyRangesLookup"
+    },
+    "MaxSmallRanges": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.building.occupants",
+          "NumericEquals": 201,
+          "Next": "MaxSmallRangesSetOccupancyRange"
+        }
+      ],
+      "Default": "SetOccupancyRangesLookup"
+    },
+    "MaxSmallRangesSetOccupancyRange": {
+      "Type": "Task",
+      "Resource": "module:setContextData",
+      "ResourceConfig": {
+        "$.building.occupancyRange": "200+"
+      },
+      "Next": "FormatBuildingResults"
+    },
+    "SetOccupancyRangesLookup": {
+      "Type": "Task",
+      "Resource": "module:setContextData",
+      "ResourceConfig": {
+        "$.occupancyRanges": {
+          "1": "1 - 50",
+          "51": "51 - 200",
+          "201": "201 - 1000",
+          "1001": "1000+"
+        }
+      },
+      "Next": "GetOccupancyRange"
+    },
+    "GetOccupancyRange": {
+      "Type": "Task",
+      "Resource": "module:setContextData",
+      "ResourceConfig": {
+        "$.building.occupancyRange": "$.occupancyRanges[$.building.occupants]"
+      },
       "Next": "FormatBuildingResults"
     },
     "FormatBuildingResults": {
