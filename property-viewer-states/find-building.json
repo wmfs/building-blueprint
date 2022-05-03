@@ -9,7 +9,18 @@
         "modelId": "building"
       },
       "ResultPath": "$.building",
-      "Next": "SetOccupancyRange"
+      "Next": "OccupantsCheck"
+    },
+    "OccupantsCheck": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.building.occupants",
+          "IsUndefined": false,
+          "Next": "SetOccupancyRange"
+        }
+      ],
+      "Default": "FormatBuildingResults"
     },
     "SetOccupancyRange": {
       "Type": "Task",
