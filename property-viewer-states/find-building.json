@@ -16,11 +16,16 @@
       "Choices": [
         {
           "Variable": "$.building.occupants",
-          "IsUndefined": false,
-          "Next": "SetOccupancyRange"
+          "IsUndefined": true,
+          "Next": "FormatBuildingResults"
+        },
+        {
+          "Variable": "$.building.occupants",
+          "IsNull": true,
+          "Next": "FormatBuildingResults"
         }
       ],
-      "Default": "FormatBuildingResults"
+      "Default": "SetOccupancyRange"
     },
     "SetOccupancyRange": {
       "Type": "Task",
