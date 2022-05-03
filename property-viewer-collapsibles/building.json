@@ -38,7 +38,7 @@
           },
           {
             "title": "Occupants",
-            "value": "{{data.building.occupants}}"
+            "value": "{{data.building.occupancyRange}}"
           },
           {
             "title": "Number of Bedrooms",
