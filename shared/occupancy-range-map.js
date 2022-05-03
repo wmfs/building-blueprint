@@ -16,7 +16,7 @@ const RangeMap = {
     'SCHOOL',
     'OFFICE'
   ],
-  smallRanges : [
+  smallRanges: [
     {
       title: '1 - 50',
       min: 1,
@@ -33,7 +33,7 @@ const RangeMap = {
       max: null
     }
   ],
-  largeRanges : [
+  largeRanges: [
     {
       title: '1 - 50',
       min: 1,

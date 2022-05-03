@@ -2,7 +2,6 @@ const RangeMap = require('../shared/occupancy-range-map')
 
 module.exports = function () {
   return async function setOccupancyRange (env, event) {
-
     const withinRange = ({ min, max }) => (min <= event.building.occupants && (event.building.occupants <= max || max === null))
 
     const fsec = event.building.fsec
