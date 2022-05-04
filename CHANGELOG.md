@@ -1,3 +1,84 @@
+# [1.7.0](https://github.com/wmfs/building-blueprint/compare/v1.6.0...v1.7.0) (2022-05-04)
+
+
+### ✨ Features
+
+* added states to produce occupancy range from building occupants field [sc-14748] ([a46c1d3](https://github.com/wmfs/building-blueprint/commit/a46c1d3ee320ca399dbeacc349d482cf768cdf41))
+* create set-occupancy-range function to set occupancyrange based on fsec & occupants fields [sc-14748] ([8224931](https://github.com/wmfs/building-blueprint/commit/82249314a9cbfdbb48f2fcc478bf5f55ea60ccee))
+* create shared occupancy-range-map with fsecs, ranges for small & large occupancy ranges [sc-14748] ([0151b78](https://github.com/wmfs/building-blueprint/commit/0151b783b1dfb8ded72c8e99bfe1f074a3ac0bdc))
+* replaced occupancy range states with function task state [sc-14748] ([e250b74](https://github.com/wmfs/building-blueprint/commit/e250b74480c2f74445d3de38609bbb154b1f42d0))
+
+
+### 🐛 Bug Fixes
+
+* add check for occupants = null [sc-14748] ([225f2d5](https://github.com/wmfs/building-blueprint/commit/225f2d5228f60c9c5194b095d9e6e0f0ba065f5b))
+* add condition to set-occupancy-range to skip if no building record found [sc-14748] ([f738be0](https://github.com/wmfs/building-blueprint/commit/f738be027f2aad9652835e18b22a03d1fcf504e5))
+* added occupants field to if check to account for buildings with a dna form completion but no occupants data [sc-14748] ([3b04207](https://github.com/wmfs/building-blueprint/commit/3b04207734fe327f835532a75114201160068dc6))
+* fix incorrect fsec variable in occupancy-range-map [sc-14748] ([e622487](https://github.com/wmfs/building-blueprint/commit/e62248748c1abee509ce92257dc1a4fc6ecc7a8e))
+* standard ([4179cba](https://github.com/wmfs/building-blueprint/commit/4179cba1edf13768cecfac497d336285ae684f8d))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6 ([412518c](https://github.com/wmfs/building-blueprint/commit/412518c3f31ec26046859627e4b3bebc8df566a8))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/exec to v6 ([d6a8f3c](https://github.com/wmfs/building-blueprint/commit/d6a8f3c161ab291c4b469f32152ac5b1acf6a597))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/exec to v6.0.3 ([59cc752](https://github.com/wmfs/building-blueprint/commit/59cc7520a8a1fa7af88c4f69af2e208ecda9a9d2))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v10 ([9bb78f8](https://github.com/wmfs/building-blueprint/commit/9bb78f813f332e6d721bb50254c58a95f7b7c586))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.4 ([2f1df38](https://github.com/wmfs/building-blueprint/commit/2f1df3878a2f655f893510f0fa0127e5be2f25ab))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.213.0 ([e0c184e](https://github.com/wmfs/building-blueprint/commit/e0c184eaa79830b152003a477569d08bfb966a1f))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.216.0 ([05610e4](https://github.com/wmfs/building-blueprint/commit/05610e4d0c0c784b90ed4282cf1acb8b4038d7a7))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.217.0 ([500576b](https://github.com/wmfs/building-blueprint/commit/500576ba554558d289f97222c4d4d2a8aa562a6c))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.218.0 ([13fc96e](https://github.com/wmfs/building-blueprint/commit/13fc96e67d94b984adfbc073c42f3a479efb23db))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.218.1 ([592b8a4](https://github.com/wmfs/building-blueprint/commit/592b8a4bdfadaab6352c8b72b98a4df906fb5498))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.220.0 ([32e64e4](https://github.com/wmfs/building-blueprint/commit/32e64e433fa6dfca46e6a7c3c84fd9a7cdd72034))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.221.0 ([a7f93a4](https://github.com/wmfs/building-blueprint/commit/a7f93a44d23050feee6f2b31da675222c29525d5))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.222.0 ([8f204c0](https://github.com/wmfs/building-blueprint/commit/8f204c091bf4409159f0c0569cc9461710d2a436))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.224.2 ([a66140a](https://github.com/wmfs/building-blueprint/commit/a66140a09fe569c6b49fbc7215981f35db6df231))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.257.0 ([7683aac](https://github.com/wmfs/building-blueprint/commit/7683aac5d501518f110f523c19df653b46e7cc2a))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.258.0 ([d289fad](https://github.com/wmfs/building-blueprint/commit/d289fad2ac4b33d0993f07c373f1867397cbd244))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.10.0 ([19ed692](https://github.com/wmfs/building-blueprint/commit/19ed6923ce986f7180d374b206cf9cf93380f05b))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.11.0 ([38633e4](https://github.com/wmfs/building-blueprint/commit/38633e4dde73b7692552deb30b3affbf06e6b91c))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.13.0 ([6002b3e](https://github.com/wmfs/building-blueprint/commit/6002b3e499d60579eb6d12761ab235615d3e6aaf))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.14.0 ([f0edc5d](https://github.com/wmfs/building-blueprint/commit/f0edc5d86607b72d21d99a511e88d77edc1aaf69))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.15.0 ([80ccf5e](https://github.com/wmfs/building-blueprint/commit/80ccf5ef309d3666b7481ce22bca89e552ae5dcc))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.16.0 ([e4c8d34](https://github.com/wmfs/building-blueprint/commit/e4c8d34c92f72e177b414685316ea26ab6dd7835))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.17.0 ([3d44065](https://github.com/wmfs/building-blueprint/commit/3d44065ce30f276e060607aae258540542d98bde))
+* **deps-dev:** update dependency chai to v4.3.5 ([8986dfb](https://github.com/wmfs/building-blueprint/commit/8986dfbc6182f7da8c7396cb16ffe22715e9f811))
+* **deps-dev:** update dependency chai to v4.3.6 ([e4590f5](https://github.com/wmfs/building-blueprint/commit/e4590f56344a1b5efcad7c8fb8f16f1f68430288))
+* **deps-dev:** update dependency debug to v4.3.3 ([e869a75](https://github.com/wmfs/building-blueprint/commit/e869a7539f95471d46beffe54d877c4d85a8f481))
+* **deps-dev:** update dependency debug to v4.3.4 ([7bff15b](https://github.com/wmfs/building-blueprint/commit/7bff15baaafaf42ba21c17c3a9fcc7f3d39657b9))
+* **deps-dev:** update dependency mocha to v10 ([36df754](https://github.com/wmfs/building-blueprint/commit/36df754c02534b3ebb1b7d09c05f2734c52e8108))
+* **deps-dev:** update dependency mocha to v9.1.2 ([d2b4a8c](https://github.com/wmfs/building-blueprint/commit/d2b4a8cb5b85044837a3ab1bb17ee2f24d167bfa))
+* **deps-dev:** update dependency mocha to v9.1.3 ([df9ff29](https://github.com/wmfs/building-blueprint/commit/df9ff29f147c2f795e210e5ea3074691c0ed5f2b))
+* **deps-dev:** update dependency mocha to v9.1.4 ([9e2c97b](https://github.com/wmfs/building-blueprint/commit/9e2c97bcd474aabda98135213ecfe5c072b210a2))
+* **deps-dev:** update dependency mocha to v9.2.0 ([fa0d20d](https://github.com/wmfs/building-blueprint/commit/fa0d20dc8196d78865c0cc600acf9cb11cfffbcc))
+* **deps-dev:** update dependency mocha to v9.2.1 ([73a5cbe](https://github.com/wmfs/building-blueprint/commit/73a5cbec3d797fbab08850f2960dc3d7160aa869))
+* **deps-dev:** update dependency mocha to v9.2.2 ([eed3693](https://github.com/wmfs/building-blueprint/commit/eed3693cb9c983d1273b65b1996b7201f855741d))
+* **deps-dev:** update dependency semantic-release to v18 ([23d70e2](https://github.com/wmfs/building-blueprint/commit/23d70e2fa8a722c93b889b3342be31d5e1ef3b73))
+* **deps-dev:** update dependency semantic-release to v18.0.1 ([80be2fc](https://github.com/wmfs/building-blueprint/commit/80be2fc66ecff68c813d2ba3f3cb658061717a64))
+* **deps-dev:** update dependency semantic-release to v19 ([f26b372](https://github.com/wmfs/building-blueprint/commit/f26b372814629e010050d7bb44182b857235a298))
+* **deps-dev:** update dependency standard to v16.0.4 ([4d7bbb9](https://github.com/wmfs/building-blueprint/commit/4d7bbb9422749f7fb6ba90588a216c19b8be8eea))
+* **deps-dev:** update dependency standard to v17 ([20e73d1](https://github.com/wmfs/building-blueprint/commit/20e73d19cdc31414a53e3fc2ed55c1cefdd25c40))
+* **deps-dev:** update semantic-release monorepo ([2b9c68a](https://github.com/wmfs/building-blueprint/commit/2b9c68a99aa29e3a8ca489bb8f6cd363618cc759))
+
+
+### 📦 Code Refactoring
+
+* remove check states and add if-return to function checking for null/undefined occupants [sc-14748] ([e5cc291](https://github.com/wmfs/building-blueprint/commit/e5cc291196cbba82a5bf805b4bca8c35e0d9c328))
+* replace 'building.occupants' 'if' check in function with choice state in 'find-building' state-machine [sc-14748] ([5b074fc](https://github.com/wmfs/building-blueprint/commit/5b074fcc78039ae5bac6ab7295742e45519bc166))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add build-env-vars context [sc-11392] ([1405e87](https://github.com/wmfs/building-blueprint/commit/1405e877929ce077796314dd153a6afe3599623e))
+* **circle:** CircleCI update next gen PostgreSQL image [sc-11442] ([a9da6d4](https://github.com/wmfs/building-blueprint/commit/a9da6d43a47a2f40c9212530c9dcfcbb2066186b))
+* **circle:** update npm install command [sc-11392] ([16f40ea](https://github.com/wmfs/building-blueprint/commit/16f40ea15b4ca73f443800dd3dd1f66ab4b2a9c8))
+
+
+### 💎 Styles
+
+* removed console logs from set-occupancy-range ([4b2a28e](https://github.com/wmfs/building-blueprint/commit/4b2a28e66e9bc1dbdc1742cef6a75f1363bfa4f3))
+
 # [1.6.0](https://github.com/wmfs/building-blueprint/compare/v1.5.0...v1.6.0) (2021-09-06)
 
 
