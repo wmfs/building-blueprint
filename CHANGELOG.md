@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/wmfs/building-blueprint/compare/v1.7.0...v1.7.1) (2022-05-05)
+
+
+### 🐛 Bug Fixes
+
+* check if building exists [sc-14748] ([6ebc700](https://github.com/wmfs/building-blueprint/commit/6ebc7008e802ccf1691a1eaf870fb147a7538cad))
+
 # [1.7.0](https://github.com/wmfs/building-blueprint/compare/v1.6.0...v1.7.0) (2022-05-04)
 
 
