@@ -1,3 +1,19 @@
+## [1.7.2](https://github.com/wmfs/building-blueprint/compare/v1.7.1...v1.7.2) (2022-07-07)
+
+
+### 🐛 Bug Fixes
+
+* convert sprinklerCoverage to string ([47878e2](https://github.com/wmfs/building-blueprint/commit/47878e2151c54c1b9b25a2390e5eadea106c4dd7))
+* update unit tests for stringy sprinklers ([470c668](https://github.com/wmfs/building-blueprint/commit/470c66848ef705b0700a762a4bc3fabdb12aad47))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.17.1 ([f54a383](https://github.com/wmfs/building-blueprint/commit/f54a383b44d9b6974244c283ef500402bbeb7ba1))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.18.0 ([0d25bb9](https://github.com/wmfs/building-blueprint/commit/0d25bb9662ab5ccbde69eb4da75b47be3b415d8a))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.19.0 ([2a83fe2](https://github.com/wmfs/building-blueprint/commit/2a83fe2a16bf62179738fb518d79daf344710555))
+* **deps-dev:** update dependency semantic-release to v19.0.3 ([e1cfb8e](https://github.com/wmfs/building-blueprint/commit/e1cfb8e6324a36acd2d04bb859711b7f125e02a5))
+
 ## [1.7.1](https://github.com/wmfs/building-blueprint/compare/v1.7.0...v1.7.1) (2022-05-05)
 
 
