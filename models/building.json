@@ -84,7 +84,7 @@
     },
     "sprinklerCoverage": {
       "description": "Percentage of sprinkler coverage of the building",
-      "type": "integer"
+      "type": "string"
     },
     "uprn": {
       "description": "Unique number for each Property Polygon",
