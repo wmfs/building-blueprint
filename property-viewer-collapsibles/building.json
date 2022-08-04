@@ -9,6 +9,344 @@
         "showWhen": "data.building",
         "facts": [
           {
+            "title": "FSEC",
+            "value": "{{ data.building.fsec }}",
+            "choices": [
+              {
+                "title": "Hospitals",
+                "value": "HOSPITAL"
+              },
+              {
+                "title": "Care Homes",
+                "value": "CARE_HOME"
+              },
+              {
+                "title": "HMO",
+                "value": "HMO"
+              },
+              {
+                "title": "Flat",
+                "value": "FLAT"
+              },
+              {
+                "title": "Hostel",
+                "value": "HOSTEL"
+              },
+              {
+                "title": "Hotel",
+                "value": "HOTEL"
+              },
+              {
+                "title": "Converted Flat",
+                "value": "CONVERTED_FLAT"
+              },
+              {
+                "title": "Other Sleeping",
+                "value": "OTHER_SLEEPING"
+              },
+              {
+                "title": "Further Education",
+                "value": "FURTHER_EDUCATION"
+              },
+              {
+                "title": "Public Buildings",
+                "value": "PUBLIC_BUILDING"
+              },
+              {
+                "title": "Licensed Premises",
+                "value": "LICENSED_PREMISE"
+              },
+              {
+                "title": "School",
+                "value": "SCHOOL"
+              },
+              {
+                "title": "Shop",
+                "value": "SHOP"
+              },
+              {
+                "title": "Other Public Building",
+                "value": "PUBLIC_BUILDING_OTHER"
+              },
+              {
+                "title": "Factory",
+                "value": "FACTORY"
+              },
+              {
+                "title": "Office",
+                "value": "OFFICE"
+              },
+              {
+                "title": "Other Workplace",
+                "value": "OTHER_WORKPLACE"
+              }
+            ]
+          },
+          {
+            "title": "Use of the premises",
+            "value": "{{ data.building.premisesUse }}",
+            "choices": [
+              {
+                "title": "Occupied",
+                "value": "OCCUPIED"
+              },
+              {
+                "title": "Unoccupied",
+                "value": "UNOCCUPIED"
+              },
+              {
+                "title": "Void",
+                "value": "VOID"
+              },
+              {
+                "title": "Derelict",
+                "value": "DERELICT"
+              },
+              {
+                "title": "Construction site",
+                "value": "CONSTRUCTION"
+              }
+            ]
+          },
+          {
+            "title": "Height",
+            "value": "{{ data.building.height }}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:height"
+            }
+          },
+          {
+            "title": "Footprint",
+            "value": "{{ data.building.footprint }}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:footprint"
+            }
+          },
+          {
+            "title": "Has occupied basement?",
+            "value": "{{ data.building.hasOccupiedBasement ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is there a defibrillator on site that the public can use?",
+            "value": "{{ data.building.publicDefib ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "What is the approximate sprinkler coverage?",
+            "value": "{{ data.building.sprinklerCoverage }}",
+            "choices": [
+              {
+                "title": "No Sprinklers",
+                "value": "0"
+              },
+              {
+                "title": "Part Sprinklers",
+                "value": "50"
+              },
+              {
+                "title": "Whole Building Sprinklered",
+                "value": "100"
+              },
+              {
+                "title": "I don't know",
+                "value": "I_DO_NOT_KNOW"
+              }
+            ]
+          },
+          {
+            "title": "Is the premises open during daytime hours only?",
+            "value": "{{ data.building.isOpenDay ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is the premises connected to a commercial business?",
+            "value": "{{ data.building.connectedToCommercial ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is there a mezzanine floor in the premises that is used for anything other than storage?",
+            "value": "{{ data.building.hasMezzanine ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is the property staffed at night?",
+            "value": "{{ data.building.isStaffedAtNight ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is there any evidence of unauthorised sleeping in this premises?",
+            "value": "{{ data.building.hasSleepingRisk ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is this premises in use at night for activities other than its normal business use? (i.e. community use in evening)",
+            "value": "{{ data.building.isOpenAtNight ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is there domestic accommodation above this property?",
+            "value": "{{ data.building.isBelowDomestic ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "QAA score",
+            "value": "{{ data.building.qaaScore }}",
+            "choices": [
+              {
+                "title": "Commended",
+                "value": "COMMENDED"
+              },
+              {
+                "title": "Meets UK expectation",
+                "value": "MEETS_UK_EXPECTATION"
+              },
+              {
+                "title": "Requires improvement",
+                "value": "REQUIRES_IMPROVEMENT"
+              },
+              {
+                "title": "Does not meet UK expectation",
+                "value": "DOES_NOT_MEET_UK_EXPECTATION"
+              },
+              {
+                "title": "I don't know",
+                "value": "I_DO_NOT_KNOW"
+              }
+            ]
+          },
+          {
+            "title": "OFSTED rating",
+            "value": "{{ data.building.ofstedScore }}",
+            "choices": [
+              {
+                "title": "Better than good",
+                "value": "BETTER_THAN_GOOD"
+              },
+              {
+                "title": "Good",
+                "value": "GOOD"
+              },
+              {
+                "title": "Less than good",
+                "value": "LESS_THAN_GOOD"
+              },
+              {
+                "title": "Special Measures",
+                "value": "SPECIAL_MEASURES"
+              },
+              {
+                "title": "I don't know",
+                "value": "I_DO_NOT_KNOW"
+              }
+            ]
+          },
+          {
+            "title": "The Care Quality Commission score for the property",
+            "value": "{{ data.building.cqcScore }}",
+            "choices": [
+              {
+                "title": "Inadequate",
+                "value": "INADEQUATE"
+              },
+              {
+                "title": "Needs Improvement",
+                "value": "IMPROVE"
+              },
+              {
+                "title": "Good",
+                "value": "GOOD"
+              },
+              {
+                "title": "Outstanding",
+                "value": "OUTSTANDING"
+              },
+              {
+                "title": "Unknown",
+                "value": "UNKNOWN"
+              },
+              {
+                "title": "Exempt",
+                "value": "EXEMPT"
+              },
+              {
+                "title": "I don't know",
+                "value": "I_DO_NOT_KNOW"
+              }
+            ]
+          },
+          {
+            "title": "The Food Standards Agency score for the property",
+            "value": "{{ data.building.fsaScore }}",
+            "choices": [
+              {
+                "title": "1 Star",
+                "value": "1"
+              },
+              {
+                "title": "2 Stars",
+                "value": "2"
+              },
+              {
+                "title": "3 Stars",
+                "value": "3"
+              },
+              {
+                "title": "4 Stars",
+                "value": "4"
+              },
+              {
+                "title": "5 Stars",
+                "value": "5"
+              },
+              {
+                "title": "Exempt",
+                "value": "Exempt"
+              },
+              {
+                "title": "I don't know",
+                "value": "I_DO_NOT_KNOW"
+              }
+            ]
+          },
+          {
+            "title": "LHA Order",
+            "value": "{{ data.building.lhaOrder ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is this a heritage site?",
+            "value": "{{ data.building.heritage ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Number of bedrooms",
+            "value": "{{ data.building.numBedrooms }}"
+          },
+          {
+            "title": "Have WMFS Building Regs comments been ignored?",
+            "value": "{{ data.building.commentsIgnored ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Does the property owner have building regulations consent?",
+            "value": "{{ data.building.hasBuildingRegConsent ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Indicators that the business is in financial difficulty?",
+            "value": "{{ data.building.anyFinancialDifficulties ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Should this HMO be licensed?",
+            "value": "{{ data.building.shouldBeLicensed ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Does the HMO have a license?",
+            "value": "{{ data.building.isHmoLicensed ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "Is the Fire Alarm of better standard than required?",
+            "value": "{{ data.building.hasFireAlarm ? 'Yes' : 'No' }}"
+          },
+          {
+            "title": "How suitable do you think the compartmentation is?",
+            "value": "{{ data.building.compartmentation }}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
+            }
+          },
+
+
+
+          {
             "title": "Construction Type",
             "value": "{{data.building.constructionType}}"
           },
@@ -29,27 +367,8 @@
             "value": "{{data.building.dateOfRevision}}"
           },
           {
-            "title": "FSEC",
-            "value": "{{data.building.fsec}}"
-          },
-          {
-            "title": "Sprinkler Coverage",
-            "value": "{{data.building.sprinklerCoverage}}{{data.building.sprinklerCoverage !== null ? '%' : ''}}"
-          },
-          {
             "title": "Occupants",
             "value": "{{data.building.occupancyRange}}"
-          },
-          {
-            "title": "Number of Bedrooms",
-            "value": "{{data.building.numBedrooms}}"
-          },
-          {
-            "title": "Compartmentation",
-            "value": "{{data.building.compartmentation}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
-            }
           },
           {
             "title": "Households",
@@ -120,110 +439,8 @@
             "value": "{{data.building.knownBuildingDate}}"
           },
           {
-            "title": "CQC score",
-            "value": "{{data.building.cqcScore}}"
-          },
-          {
-            "title": "FSA score",
-            "value": "{{data.building.fsaScore}}"
-          },
-          {
-            "title": "Should be licensed?",
-            "value": "{{data.building.shouldBeLicensed}}"
-          },
-          {
-            "title": "LHA Order",
-            "value": "{{data.building.lhaOrder}}"
-          },
-          {
-            "title": "OFSTED score",
-            "value": "{{data.building.ofstedScore}}"
-          },
-          {
-            "title": "QAA score",
-            "value": "{{data.building.qaaScore}}"
-          },
-          {
-            "title": "comments ignored",
-            "value": "{{data.building.commentsIgnored}}"
-          },
-          {
-            "title": "Is heritage building?",
-            "value": "{{data.building.heritage}}"
-          },
-          {
             "title": "COMAH",
             "value": "{{data.building.comah}}"
-          },
-          {
-            "title": "Connect to commercial",
-            "value": "{{data.building.connectedToCommerical}}"
-          },
-          {
-            "title": "Is open day?",
-            "value": "{{data.building.isOpenDay}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
-            }
-          },
-          {
-            "title": "Is below domestic?",
-            "value": "{{data.building.isBelowDomestic}}"
-          },
-          {
-            "title": "Any financial difficulties?",
-            "value": "{{data.building.anyFinancialDifficulties}}"
-          },
-          {
-            "title": "Has fire alarm?",
-            "value": "{{data.building.hasFireAlarm}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
-            }
-          },
-          {
-            "title": "Has mezzanine?",
-            "value": "{{data.building.hasMezzanine}}"
-          },
-          {
-            "title": "Has building reg consent?",
-            "value": "{{data.building.hasBuildingRegConsent}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
-            }
-          },
-          {
-            "title": "Has occupied basement?",
-            "value": "{{data.building.hasOccupiedBasement}}"
-          },
-          {
-            "title": "Open at night?",
-            "value": "{{data.building.isOpenAtNight}}"
-          },
-          {
-            "title": "Has sleeping risk?",
-            "value": "{{data.building.hasSleepingRisk}}"
-          },
-          {
-            "title": "Staffed at night?",
-            "value": "{{data.building.isStaffedAtNight}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:trueFalseToYesNo"
-            }
-          },
-          {
-            "title": "Footprint",
-            "value": "{{data.building.footprint}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:footprint"
-            }
-          },
-          {
-            "title": "Height/Floors",
-            "value": "{{data.building.height}}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:height"
-            }
           }
         ]
       },
