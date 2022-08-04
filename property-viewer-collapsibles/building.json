@@ -154,11 +154,13 @@
           },
           {
             "title": "Is the premises open during daytime hours only?",
-            "value": "{{ data.building.isOpenDay ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.isOpenDay ? 'Yes' : 'No' }}",
+            "showWhen": "!(data.building.fsec ==='CARE_HOME' || data.building.fsec ==='CONVERTED_FLAT' || data.building.fsec ==='FLAT' || data.building.fsec==='HMO' || data.building.fsec==='HOSTEL' || data.building.fsec==='HOTEL' || data.building.fsec==='OTHER_SLEEPING')"
           },
           {
             "title": "Is the premises connected to a commercial business?",
-            "value": "{{ data.building.connectedToCommercial ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.connectedToCommercial ? 'Yes' : 'No' }}",
+            "showWhen": "!(data.building.fsec === 'CARE_HOME' || data.building.fsec === 'HOSPITAL')"
           },
           {
             "title": "Occupants",
@@ -166,23 +168,28 @@
           },
           {
             "title": "Is there a mezzanine floor in the premises that is used for anything other than storage?",
-            "value": "{{ data.building.hasMezzanine ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.hasMezzanine ? 'Yes' : 'No' }}",
+            "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'FURTHER_EDUCATION')"
           },
           {
             "title": "Is the property staffed at night?",
-            "value": "{{ data.building.isStaffedAtNight ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.isStaffedAtNight ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'HOTEL' || data.building.fsec === 'HOSTEL' || data.building.fsec === 'OTHER_SLEEPING'"
           },
           {
             "title": "Is there any evidence of unauthorised sleeping in this premises?",
-            "value": "{{ data.building.hasSleepingRisk ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.hasSleepingRisk ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec=== 'FACTORY' || data.building.fsec=== 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE'"
           },
           {
             "title": "Is this premises in use at night for activities other than its normal business use? (i.e. community use in evening)",
-            "value": "{{ data.building.isOpenAtNight ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.isOpenAtNight ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
           },
           {
             "title": "Is there domestic accommodation above this property?",
-            "value": "{{ data.building.isBelowDomestic ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.isBelowDomestic ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
           },
           {
             "title": "QAA score",
@@ -208,7 +215,8 @@
                 "title": "I don't know",
                 "value": "I_DO_NOT_KNOW"
               }
-            ]
+            ],
+            "showWhen": "data.building.fsec === 'FURTHER_EDUCATION'"
           },
           {
             "title": "OFSTED rating",
@@ -234,7 +242,8 @@
                 "title": "I don't know",
                 "value": "I_DO_NOT_KNOW"
               }
-            ]
+            ],
+            "showWhen": "data.building.fsec === 'SCHOOL'"
           },
           {
             "title": "The Care Quality Commission score for the property",
@@ -268,7 +277,8 @@
                 "title": "I don't know",
                 "value": "I_DO_NOT_KNOW"
               }
-            ]
+            ],
+            "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'HMO' || data.building.fsec === 'HOTEL' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'PUBLIC_BUILDING')"
           },
           {
             "title": "The Food Standards Agency score for the property",
@@ -302,11 +312,13 @@
                 "title": "I don't know",
                 "value": "I_DO_NOT_KNOW"
               }
-            ]
+            ],
+            "showWhen": "!(data.building.fsec === 'HMO' || data.building.fsec === 'FLAT' || data.building.fsec === 'CONVERTED_FLAT')"
           },
           {
             "title": "LHA Order",
-            "value": "{{ data.building.lhaOrder ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.lhaOrder ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'FLAT'"
           },
           {
             "title": "Is this a heritage site?",
@@ -314,7 +326,8 @@
           },
           {
             "title": "Number of bedrooms",
-            "value": "{{ data.building.numBedrooms }}"
+            "value": "{{ data.building.numBedrooms }}",
+            "showWhen": "data.building.fsec === 'CARE_HOME'"
           },
           {
             "title": "Have WMFS Building Regs comments been ignored?",
@@ -330,11 +343,13 @@
           },
           {
             "title": "Should this HMO be licensed?",
-            "value": "{{ data.building.shouldBeLicensed ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.shouldBeLicensed ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'HMO'"
           },
           {
             "title": "Does the HMO have a license?",
-            "value": "{{ data.building.isHmoLicensed ? 'Yes' : 'No' }}"
+            "value": "{{ data.building.isHmoLicensed ? 'Yes' : 'No' }}",
+            "showWhen": "data.building.fsec === 'HMO' && data.building.shouldBeLicensed === true"
           },
           {
             "title": "Is the Fire Alarm of better standard than required?",
