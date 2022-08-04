@@ -9,6 +9,13 @@
         "modelId": "building"
       },
       "ResultPath": "$.building",
+      "Next": "CleanPremisesUseValue"
+    },
+    "CleanPremisesUseValue": {
+      "Type": "Task",
+      "InputPath": "$.building",
+      "Resource": "function:wmfs_cleanPremisesUseValue",
+      "ResultPath": "$.building",
       "Next": "SetOccupancyRange"
     },
     "SetOccupancyRange": {
