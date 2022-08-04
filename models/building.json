@@ -82,6 +82,9 @@
     "shouldBeLicensed": {
       "type": "boolean"
     },
+    "isHmoLicensed": {
+      "type": "boolean"
+    },
     "sprinklerCoverage": {
       "description": "Percentage of sprinkler coverage of the building",
       "type": "string"
