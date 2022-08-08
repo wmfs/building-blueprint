@@ -41,6 +41,9 @@
     "height": {
       "type": "string"
     },
+    "numStoreys": {
+      "type": "string"
+    },
     "heritage": {
       "type": "boolean"
     },
