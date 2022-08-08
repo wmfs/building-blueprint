@@ -116,6 +116,13 @@
             }
           },
           {
+            "title": "Number of storeys",
+            "value": "{{ data.building.numStoreys }}",
+            "choices": {
+              "$tymlyRef": "function:wmfs_propertyDetailFormat:numStoreys"
+            }
+          },
+          {
             "title": "Footprint",
             "value": "{{ data.building.footprint }}",
             "choices": {
