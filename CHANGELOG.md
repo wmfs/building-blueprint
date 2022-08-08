@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/wmfs/building-blueprint/compare/v1.8.0...v1.8.1) (2022-08-08)
+
+
+### 🐛 Bug Fixes
+
+* check building record for clean-premises func ([833b872](https://github.com/wmfs/building-blueprint/commit/833b872e2c394f6b81df31a2b4cbf56b4e8f7be0))
+
 # [1.8.0](https://github.com/wmfs/building-blueprint/compare/v1.7.2...v1.8.0) (2022-08-08)
 
 
