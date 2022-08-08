@@ -1,3 +1,28 @@
+# [1.8.0](https://github.com/wmfs/building-blueprint/compare/v1.7.2...v1.8.0) (2022-08-08)
+
+
+### ✨ Features
+
+* add conditional logic to building fields ([8e78d43](https://github.com/wmfs/building-blueprint/commit/8e78d43d6362bd3e53a1b36bcb0d6a7b20fff48b))
+
+
+### 🐛 Bug Fixes
+
+* add missing properties [sc-16102] ([2c73ee7](https://github.com/wmfs/building-blueprint/commit/2c73ee799f0e0b70bb0b2b1b97c4760373a3923f))
+* clean premises use values (used to store true/false) ([57f43d2](https://github.com/wmfs/building-blueprint/commit/57f43d2b9e6535b6710e6e7066b25a906b0cd61e))
+* remove non-existing properties [sc-16102] ([7927c74](https://github.com/wmfs/building-blueprint/commit/7927c74b64115654c29fc14e7234c2d335d73255))
+* tidy up fact set formatting and include all questions from building DNA form [sc-16102] ([33f70f7](https://github.com/wmfs/building-blueprint/commit/33f70f71489e40d322d9026669c3321f9ec2c9b4))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.21.0 ([6985a49](https://github.com/wmfs/building-blueprint/commit/6985a49240ecce2318d75cf6a85bb6845fec2c7b))
+
+
+### 💎 Styles
+
+* standard ([4960098](https://github.com/wmfs/building-blueprint/commit/4960098708e445fa925f7d3462d1ae624a6af773))
+
 ## [1.7.2](https://github.com/wmfs/building-blueprint/compare/v1.7.1...v1.7.2) (2022-07-07)
 
 
