@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/wmfs/building-blueprint/compare/v1.8.1...v1.9.0) (2022-08-09)
+
+
+### ✨ Features
+
+* add storeys question to model [sc-15869] ([650fb64](https://github.com/wmfs/building-blueprint/commit/650fb6475d44ef44ef6fc58182b3e64bb21c92da))
+
+
+### 🐛 Bug Fixes
+
+* add storeys to building collapsible [sc-15869] ([df5b86c](https://github.com/wmfs/building-blueprint/commit/df5b86c8105139bbb13b3c04cfb9a36895df8c9d))
+
 ## [1.8.1](https://github.com/wmfs/building-blueprint/compare/v1.8.0...v1.8.1) (2022-08-08)
 
 
