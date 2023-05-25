@@ -368,6 +368,10 @@
             "choices": {
               "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
             }
+          },
+          {
+            "title": "Organisation Email",
+            "value": "{{ data.building.organisationEmail }}"
           }
         ]
       },
