@@ -111,6 +111,9 @@
     },
     "externalSource": {
       "type": "string"
+    },
+    "organisationEmail": {
+      "type": "string"
     }
   }
 }
