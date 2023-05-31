@@ -1,3 +1,47 @@
+# [1.10.0](https://github.com/wmfs/building-blueprint/compare/v1.9.0...v1.10.0) (2023-05-31)
+
+
+### ✨ Features
+
+* added 'organisationemail' to building model [sc-19220] ([245708f](https://github.com/wmfs/building-blueprint/commit/245708f030db4fd8e5efebbc5cc84b316cb53eff))
+* added 'organisationemail' to building property-viewer-collapsible so it can be seen on the property card [sc-19220] ([343af48](https://github.com/wmfs/building-blueprint/commit/343af4864d1e45463150a030e2c0b6daffce338f))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([445ff8d](https://github.com/wmfs/building-blueprint/commit/445ff8d18a8385cab0e536fb6f515dd6db120b28))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.3 ([3455fc3](https://github.com/wmfs/building-blueprint/commit/3455fc35cc3ad1797dd92ef51183aec5dad1d330))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.256.0 ([fe3956f](https://github.com/wmfs/building-blueprint/commit/fe3956f651e1404bf7fa298c5775b7e62609cfc4))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.282.0 ([a214ba1](https://github.com/wmfs/building-blueprint/commit/a214ba183c8e45a00178cc9b2aea110d28485681))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.283.0 ([240a073](https://github.com/wmfs/building-blueprint/commit/240a0735e26a70cb7393c5467ab2d787f273519c))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.0 ([16c281a](https://github.com/wmfs/building-blueprint/commit/16c281a7c3f17cdf28f5027218f95b86f8fa3de3))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.1 ([bd58153](https://github.com/wmfs/building-blueprint/commit/bd58153db0ea8a185b6ff7f4b9028c3d21a88ef7))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.2 ([18241c3](https://github.com/wmfs/building-blueprint/commit/18241c38f5655de33d768161b2f4625aaee7d7e5))
+* **deps-dev:** update dependency chai to v4.3.7 ([1674156](https://github.com/wmfs/building-blueprint/commit/167415670f18ba0084109455aff265d3d2858c82))
+* **deps-dev:** update dependency mocha to v10.1.0 ([2d0a013](https://github.com/wmfs/building-blueprint/commit/2d0a01303567a6937da46bb41e46aba70aaa0b7a))
+* **deps-dev:** update dependency mocha to v10.2.0 ([c71fd13](https://github.com/wmfs/building-blueprint/commit/c71fd13f1d6e6514081ba0b858f7bdd507d87251))
+* **deps-dev:** update dependency semantic-release to v19.0.4 ([b3996b6](https://github.com/wmfs/building-blueprint/commit/b3996b612f3a6f906c36b645bc493566f29be679))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([3f08370](https://github.com/wmfs/building-blueprint/commit/3f083700f28ecd867b7f68e83bb33b71f132346c))
+* **deps-dev:** update dependency semantic-release to v20 ([bcd1a0b](https://github.com/wmfs/building-blueprint/commit/bcd1a0bfb8489c3d3d4fd94a3fc32e65f0a3fd7f))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([0ec0d7d](https://github.com/wmfs/building-blueprint/commit/0ec0d7d53cdd09a42b9b73504bdfbbecab026345))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([093ad26](https://github.com/wmfs/building-blueprint/commit/093ad26372d60371278206d57285d9afdde59d08))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([9902cad](https://github.com/wmfs/building-blueprint/commit/9902cad9adbab615cb1279865ab2edce3555df4d))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([fe67e3a](https://github.com/wmfs/building-blueprint/commit/fe67e3a2dc63468cca9fba1dc2cd1b0d45e89b13))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([032b136](https://github.com/wmfs/building-blueprint/commit/032b136b90123cd2f863b7f3b6ed52cf9adde845))
+* **deps-dev:** update dependency semantic-release to v20.1.1 ([a7885d3](https://github.com/wmfs/building-blueprint/commit/a7885d3464b1ad66842b5de42aedcc07c6f9ea20))
+* **deps-dev:** update dependency semantic-release to v20.1.3 ([116f99c](https://github.com/wmfs/building-blueprint/commit/116f99c32a1256f786b10ba31290a26fca2bc484))
+* **deps-dev:** update dependency semantic-release to v21 ([4d44013](https://github.com/wmfs/building-blueprint/commit/4d440136ddca3125984311681abb7aa8e295dcca))
+* **deps-dev:** update dependency semantic-release to v21.0.1 ([7b20839](https://github.com/wmfs/building-blueprint/commit/7b208394ee9bf658d9354d6058497024d86f671f))
+* **deps-dev:** update dependency semantic-release to v21.0.2 ([b7f5e5d](https://github.com/wmfs/building-blueprint/commit/b7f5e5dc408b4ddfbb85b876d15fb8860cda4ada))
+* **deps-dev:** update dependency standard to v17.1.0 ([132b369](https://github.com/wmfs/building-blueprint/commit/132b369ddbfbe0ca95ed86f0c4cafdd013d5c681))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** CircleCI update PostgreSQL image to 15 0 [sc-18659] ([cd7c776](https://github.com/wmfs/building-blueprint/commit/cd7c776d500aa084fe5d038e6420420a782c9253))
+* **circle:** update postgres to 15.1-postgis ([0069931](https://github.com/wmfs/building-blueprint/commit/00699314a7c3da0e5b33bffd77ba5469db333232))
+* **circle:** update postgres to 15.2-postgis [sc-19693] ([3cc88f5](https://github.com/wmfs/building-blueprint/commit/3cc88f564b46a146f889c2b4581d1f823e712406))
+
 # [1.9.0](https://github.com/wmfs/building-blueprint/compare/v1.8.1...v1.9.0) (2022-08-09)
 
 
