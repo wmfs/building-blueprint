@@ -1,3 +1,25 @@
+# [1.11.0](https://github.com/wmfs/building-blueprint/compare/v1.10.0...v1.11.0) (2023-09-19)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.258.0 ([1de32bb](https://github.com/wmfs/building-blueprint/commit/1de32bbd40e87e2bd5f86a728f1fd1ada0c68276))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.261.0 ([#782](https://github.com/wmfs/building-blueprint/issues/782)) ([f5e2e33](https://github.com/wmfs/building-blueprint/commit/f5e2e33d211b2a598fcb528942984c4937ac48de))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.284.0 ([bb0a01c](https://github.com/wmfs/building-blueprint/commit/bb0a01c3dcc2e6a84555b218e59b19df92c5edcf))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.286.0 ([6165f1c](https://github.com/wmfs/building-blueprint/commit/6165f1c2c736030229290b1b53175245c5bf871e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-pg-plugin to v1.288.0 ([#783](https://github.com/wmfs/building-blueprint/issues/783)) ([1b4f8c4](https://github.com/wmfs/building-blueprint/commit/1b4f8c405fffd79df10e98584d802bc6a2f99685))
+* **deps-dev:** update dependency chai to v4.3.8 ([e4acfa5](https://github.com/wmfs/building-blueprint/commit/e4acfa5e051f3baa69289ca07b3d04995f70549f))
+* **deps-dev:** update dependency semantic-release to v21.0.3 ([a9c7093](https://github.com/wmfs/building-blueprint/commit/a9c70938a755ea686e1aafad987356158b26cb35))
+* **deps-dev:** update dependency semantic-release to v21.0.5 ([1451d96](https://github.com/wmfs/building-blueprint/commit/1451d96c8494cb38cbc066687ec57f7f895c766e))
+* **deps-dev:** update dependency semantic-release to v21.0.6 ([f7b757a](https://github.com/wmfs/building-blueprint/commit/f7b757a6bc6535ef39ea1e52a61376c172414982))
+* **deps-dev:** update dependency semantic-release to v21.0.7 ([24413ab](https://github.com/wmfs/building-blueprint/commit/24413ab37afb09c8cfa52f3413482ebe11024e06))
+* **deps-dev:** update dependency semantic-release to v21.0.9 ([a45d1a4](https://github.com/wmfs/building-blueprint/commit/a45d1a429af9cc491f89829ce3d1397a503b6f4f))
+* **deps-dev:** update dependency semantic-release to v21.1.0 ([c2b9938](https://github.com/wmfs/building-blueprint/commit/c2b99383c08f6c0a9cfa348567a383310c8be7e4))
+* **deps-dev:** update dependency semantic-release to v21.1.1 ([0a75b5d](https://github.com/wmfs/building-blueprint/commit/0a75b5dadb71642d78f9ea093123397ed3d93a14))
+* **deps-dev:** update dependency semantic-release to v21.1.2 ([cbe4e1b](https://github.com/wmfs/building-blueprint/commit/cbe4e1ba027dad1db2e8cd57b4bae2e57603151f))
+* **deps-dev:** update dependency semantic-release to v22 ([31c16a1](https://github.com/wmfs/building-blueprint/commit/31c16a103d07b9253b0016a8863a9b08ca999782))
+* **deps:** revert semantic-release ([10bdcb5](https://github.com/wmfs/building-blueprint/commit/10bdcb5d6e4c2e4288cb7ca33ad26d33038abee6))
+
 # [1.10.0](https://github.com/wmfs/building-blueprint/compare/v1.9.0...v1.10.0) (2023-05-31)
 
 
