@@ -1,385 +1,393 @@
 {
-  "type": "Collapsible",
-  "title": "Building",
-  "card": {
-    "type": "AdaptiveCard",
-    "body": [
-      {
-        "type": "FactSet",
-        "showWhen": "data.building",
-        "facts": [
+  "type": "Container",
+  "spacing": "none",
+  "padding": "none",
+  "background": "none",
+  "items": [
+    {
+      "type": "Collapsible",
+      "title": "Building",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
           {
-            "title": "FSEC",
-            "value": "{{ data.building.fsec }}",
-            "choices": [
+            "type": "FactSet",
+            "showWhen": "data.building",
+            "facts": [
               {
-                "title": "Hospitals",
-                "value": "HOSPITAL"
+                "title": "FSEC",
+                "value": "{{ data.building.fsec }}",
+                "choices": [
+                  {
+                    "title": "Hospitals",
+                    "value": "HOSPITAL"
+                  },
+                  {
+                    "title": "Care Homes",
+                    "value": "CARE_HOME"
+                  },
+                  {
+                    "title": "HMO",
+                    "value": "HMO"
+                  },
+                  {
+                    "title": "Flat",
+                    "value": "FLAT"
+                  },
+                  {
+                    "title": "Hostel",
+                    "value": "HOSTEL"
+                  },
+                  {
+                    "title": "Hotel",
+                    "value": "HOTEL"
+                  },
+                  {
+                    "title": "Converted Flat",
+                    "value": "CONVERTED_FLAT"
+                  },
+                  {
+                    "title": "Other Sleeping",
+                    "value": "OTHER_SLEEPING"
+                  },
+                  {
+                    "title": "Further Education",
+                    "value": "FURTHER_EDUCATION"
+                  },
+                  {
+                    "title": "Public Buildings",
+                    "value": "PUBLIC_BUILDING"
+                  },
+                  {
+                    "title": "Licensed Premises",
+                    "value": "LICENSED_PREMISE"
+                  },
+                  {
+                    "title": "School",
+                    "value": "SCHOOL"
+                  },
+                  {
+                    "title": "Shop",
+                    "value": "SHOP"
+                  },
+                  {
+                    "title": "Other Public Building",
+                    "value": "PUBLIC_BUILDING_OTHER"
+                  },
+                  {
+                    "title": "Factory",
+                    "value": "FACTORY"
+                  },
+                  {
+                    "title": "Office",
+                    "value": "OFFICE"
+                  },
+                  {
+                    "title": "Other Workplace",
+                    "value": "OTHER_WORKPLACE"
+                  }
+                ]
               },
               {
-                "title": "Care Homes",
-                "value": "CARE_HOME"
+                "title": "Use of the premises",
+                "value": "{{ data.building.premisesUse }}",
+                "choices": [
+                  {
+                    "title": "Occupied",
+                    "value": "OCCUPIED"
+                  },
+                  {
+                    "title": "Unoccupied",
+                    "value": "UNOCCUPIED"
+                  },
+                  {
+                    "title": "Void",
+                    "value": "VOID"
+                  },
+                  {
+                    "title": "Derelict",
+                    "value": "DERELICT"
+                  },
+                  {
+                    "title": "Construction site",
+                    "value": "CONSTRUCTION"
+                  }
+                ]
               },
               {
-                "title": "HMO",
-                "value": "HMO"
+                "title": "Height",
+                "value": "{{ data.building.height }}",
+                "choices": {
+                  "$tymlyRef": "function:wmfs_propertyDetailFormat:height"
+                }
               },
               {
-                "title": "Flat",
-                "value": "FLAT"
+                "title": "Number of storeys",
+                "value": "{{ data.building.numStoreys }}",
+                "choices": {
+                  "$tymlyRef": "function:wmfs_propertyDetailFormat:numStoreys"
+                }
               },
               {
-                "title": "Hostel",
-                "value": "HOSTEL"
+                "title": "Footprint",
+                "value": "{{ data.building.footprint }}",
+                "choices": {
+                  "$tymlyRef": "function:wmfs_propertyDetailFormat:footprint"
+                }
               },
               {
-                "title": "Hotel",
-                "value": "HOTEL"
+                "title": "Has occupied basement?",
+                "value": "{{ data.building.hasOccupiedBasement ? 'Yes' : 'No' }}"
               },
               {
-                "title": "Converted Flat",
-                "value": "CONVERTED_FLAT"
+                "title": "Is there a defibrillator on site that the public can use?",
+                "value": "{{ data.building.publicDefib ? 'Yes' : 'No' }}"
               },
               {
-                "title": "Other Sleeping",
-                "value": "OTHER_SLEEPING"
+                "title": "What is the approximate sprinkler coverage?",
+                "value": "{{ data.building.sprinklerCoverage }}",
+                "choices": [
+                  {
+                    "title": "No Sprinklers",
+                    "value": "0"
+                  },
+                  {
+                    "title": "Part Sprinklers",
+                    "value": "50"
+                  },
+                  {
+                    "title": "Whole Building Sprinklered",
+                    "value": "100"
+                  },
+                  {
+                    "title": "I don't know",
+                    "value": "I_DO_NOT_KNOW"
+                  }
+                ]
               },
               {
-                "title": "Further Education",
-                "value": "FURTHER_EDUCATION"
+                "title": "Is the premises open during daytime hours only?",
+                "value": "{{ data.building.isOpenDay ? 'Yes' : 'No' }}",
+                "showWhen": "!(data.building.fsec ==='CARE_HOME' || data.building.fsec ==='CONVERTED_FLAT' || data.building.fsec ==='FLAT' || data.building.fsec==='HMO' || data.building.fsec==='HOSTEL' || data.building.fsec==='HOTEL' || data.building.fsec==='OTHER_SLEEPING')"
               },
               {
-                "title": "Public Buildings",
-                "value": "PUBLIC_BUILDING"
+                "title": "Is the premises connected to a commercial business?",
+                "value": "{{ data.building.connectedToCommercial ? 'Yes' : 'No' }}",
+                "showWhen": "!(data.building.fsec === 'CARE_HOME' || data.building.fsec === 'HOSPITAL')"
               },
               {
-                "title": "Licensed Premises",
-                "value": "LICENSED_PREMISE"
+                "title": "Occupants",
+                "value": "{{ data.building.occupancyRange }}"
               },
               {
-                "title": "School",
-                "value": "SCHOOL"
+                "title": "Is there a mezzanine floor in the premises that is used for anything other than storage?",
+                "value": "{{ data.building.hasMezzanine ? 'Yes' : 'No' }}",
+                "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'FURTHER_EDUCATION')"
               },
               {
-                "title": "Shop",
-                "value": "SHOP"
+                "title": "Is the property staffed at night?",
+                "value": "{{ data.building.isStaffedAtNight ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'HOTEL' || data.building.fsec === 'HOSTEL' || data.building.fsec === 'OTHER_SLEEPING'"
               },
               {
-                "title": "Other Public Building",
-                "value": "PUBLIC_BUILDING_OTHER"
+                "title": "Is there any evidence of unauthorised sleeping in this premises?",
+                "value": "{{ data.building.hasSleepingRisk ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec=== 'FACTORY' || data.building.fsec=== 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE'"
               },
               {
-                "title": "Factory",
-                "value": "FACTORY"
+                "title": "Is this premises in use at night for activities other than its normal business use? (i.e. community use in evening)",
+                "value": "{{ data.building.isOpenAtNight ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
               },
               {
-                "title": "Office",
-                "value": "OFFICE"
+                "title": "Is there domestic accommodation above this property?",
+                "value": "{{ data.building.isBelowDomestic ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
               },
               {
-                "title": "Other Workplace",
-                "value": "OTHER_WORKPLACE"
+                "title": "QAA score",
+                "value": "{{ data.building.qaaScore }}",
+                "choices": [
+                  {
+                    "title": "Commended",
+                    "value": "COMMENDED"
+                  },
+                  {
+                    "title": "Meets UK expectation",
+                    "value": "MEETS_UK_EXPECTATION"
+                  },
+                  {
+                    "title": "Requires improvement",
+                    "value": "REQUIRES_IMPROVEMENT"
+                  },
+                  {
+                    "title": "Does not meet UK expectation",
+                    "value": "DOES_NOT_MEET_UK_EXPECTATION"
+                  },
+                  {
+                    "title": "I don't know",
+                    "value": "I_DO_NOT_KNOW"
+                  }
+                ],
+                "showWhen": "data.building.fsec === 'FURTHER_EDUCATION'"
+              },
+              {
+                "title": "OFSTED rating",
+                "value": "{{ data.building.ofstedScore }}",
+                "choices": [
+                  {
+                    "title": "Better than good",
+                    "value": "BETTER_THAN_GOOD"
+                  },
+                  {
+                    "title": "Good",
+                    "value": "GOOD"
+                  },
+                  {
+                    "title": "Less than good",
+                    "value": "LESS_THAN_GOOD"
+                  },
+                  {
+                    "title": "Special Measures",
+                    "value": "SPECIAL_MEASURES"
+                  },
+                  {
+                    "title": "I don't know",
+                    "value": "I_DO_NOT_KNOW"
+                  }
+                ],
+                "showWhen": "data.building.fsec === 'SCHOOL'"
+              },
+              {
+                "title": "The Care Quality Commission score for the property",
+                "value": "{{ data.building.cqcScore }}",
+                "choices": [
+                  {
+                    "title": "Inadequate",
+                    "value": "INADEQUATE"
+                  },
+                  {
+                    "title": "Needs Improvement",
+                    "value": "IMPROVE"
+                  },
+                  {
+                    "title": "Good",
+                    "value": "GOOD"
+                  },
+                  {
+                    "title": "Outstanding",
+                    "value": "OUTSTANDING"
+                  },
+                  {
+                    "title": "Unknown",
+                    "value": "UNKNOWN"
+                  },
+                  {
+                    "title": "Exempt",
+                    "value": "EXEMPT"
+                  },
+                  {
+                    "title": "I don't know",
+                    "value": "I_DO_NOT_KNOW"
+                  }
+                ],
+                "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'HMO' || data.building.fsec === 'HOTEL' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'PUBLIC_BUILDING')"
+              },
+              {
+                "title": "The Food Standards Agency score for the property",
+                "value": "{{ data.building.fsaScore }}",
+                "choices": [
+                  {
+                    "title": "1 Star",
+                    "value": "1"
+                  },
+                  {
+                    "title": "2 Stars",
+                    "value": "2"
+                  },
+                  {
+                    "title": "3 Stars",
+                    "value": "3"
+                  },
+                  {
+                    "title": "4 Stars",
+                    "value": "4"
+                  },
+                  {
+                    "title": "5 Stars",
+                    "value": "5"
+                  },
+                  {
+                    "title": "Exempt",
+                    "value": "Exempt"
+                  },
+                  {
+                    "title": "I don't know",
+                    "value": "I_DO_NOT_KNOW"
+                  }
+                ],
+                "showWhen": "!(data.building.fsec === 'HMO' || data.building.fsec === 'FLAT' || data.building.fsec === 'CONVERTED_FLAT')"
+              },
+              {
+                "title": "LHA Order",
+                "value": "{{ data.building.lhaOrder ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'FLAT'"
+              },
+              {
+                "title": "Is this a heritage site?",
+                "value": "{{ data.building.heritage ? 'Yes' : 'No' }}"
+              },
+              {
+                "title": "Number of bedrooms",
+                "value": "{{ data.building.numBedrooms }}",
+                "showWhen": "data.building.fsec === 'CARE_HOME'"
+              },
+              {
+                "title": "Have WMFS Building Regs comments been ignored?",
+                "value": "{{ data.building.commentsIgnored ? 'Yes' : 'No' }}"
+              },
+              {
+                "title": "Does the property owner have building regulations consent?",
+                "value": "{{ data.building.hasBuildingRegConsent ? 'Yes' : 'No' }}"
+              },
+              {
+                "title": "Indicators that the business is in financial difficulty?",
+                "value": "{{ data.building.anyFinancialDifficulties ? 'Yes' : 'No' }}"
+              },
+              {
+                "title": "Should this HMO be licensed?",
+                "value": "{{ data.building.shouldBeLicensed ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'HMO'"
+              },
+              {
+                "title": "Does the HMO have a license?",
+                "value": "{{ data.building.isHmoLicensed ? 'Yes' : 'No' }}",
+                "showWhen": "data.building.fsec === 'HMO' && data.building.shouldBeLicensed === true"
+              },
+              {
+                "title": "Is the Fire Alarm of better standard than required?",
+                "value": "{{ data.building.hasFireAlarm ? 'Yes' : 'No' }}"
+              },
+              {
+                "title": "How suitable do you think the compartmentation is?",
+                "value": "{{ data.building.compartmentation }}",
+                "choices": {
+                  "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
+                }
+              },
+              {
+                "title": "Organisation Email",
+                "value": "{{ data.building.organisationEmail }}"
               }
             ]
           },
           {
-            "title": "Use of the premises",
-            "value": "{{ data.building.premisesUse }}",
-            "choices": [
-              {
-                "title": "Occupied",
-                "value": "OCCUPIED"
-              },
-              {
-                "title": "Unoccupied",
-                "value": "UNOCCUPIED"
-              },
-              {
-                "title": "Void",
-                "value": "VOID"
-              },
-              {
-                "title": "Derelict",
-                "value": "DERELICT"
-              },
-              {
-                "title": "Construction site",
-                "value": "CONSTRUCTION"
-              }
-            ]
-          },
-          {
-            "title": "Height",
-            "value": "{{ data.building.height }}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:height"
-            }
-          },
-          {
-            "title": "Number of storeys",
-            "value": "{{ data.building.numStoreys }}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:numStoreys"
-            }
-          },
-          {
-            "title": "Footprint",
-            "value": "{{ data.building.footprint }}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:footprint"
-            }
-          },
-          {
-            "title": "Has occupied basement?",
-            "value": "{{ data.building.hasOccupiedBasement ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "Is there a defibrillator on site that the public can use?",
-            "value": "{{ data.building.publicDefib ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "What is the approximate sprinkler coverage?",
-            "value": "{{ data.building.sprinklerCoverage }}",
-            "choices": [
-              {
-                "title": "No Sprinklers",
-                "value": "0"
-              },
-              {
-                "title": "Part Sprinklers",
-                "value": "50"
-              },
-              {
-                "title": "Whole Building Sprinklered",
-                "value": "100"
-              },
-              {
-                "title": "I don't know",
-                "value": "I_DO_NOT_KNOW"
-              }
-            ]
-          },
-          {
-            "title": "Is the premises open during daytime hours only?",
-            "value": "{{ data.building.isOpenDay ? 'Yes' : 'No' }}",
-            "showWhen": "!(data.building.fsec ==='CARE_HOME' || data.building.fsec ==='CONVERTED_FLAT' || data.building.fsec ==='FLAT' || data.building.fsec==='HMO' || data.building.fsec==='HOSTEL' || data.building.fsec==='HOTEL' || data.building.fsec==='OTHER_SLEEPING')"
-          },
-          {
-            "title": "Is the premises connected to a commercial business?",
-            "value": "{{ data.building.connectedToCommercial ? 'Yes' : 'No' }}",
-            "showWhen": "!(data.building.fsec === 'CARE_HOME' || data.building.fsec === 'HOSPITAL')"
-          },
-          {
-            "title": "Occupants",
-            "value": "{{ data.building.occupancyRange }}"
-          },
-          {
-            "title": "Is there a mezzanine floor in the premises that is used for anything other than storage?",
-            "value": "{{ data.building.hasMezzanine ? 'Yes' : 'No' }}",
-            "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'FURTHER_EDUCATION')"
-          },
-          {
-            "title": "Is the property staffed at night?",
-            "value": "{{ data.building.isStaffedAtNight ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'HOTEL' || data.building.fsec === 'HOSTEL' || data.building.fsec === 'OTHER_SLEEPING'"
-          },
-          {
-            "title": "Is there any evidence of unauthorised sleeping in this premises?",
-            "value": "{{ data.building.hasSleepingRisk ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec=== 'FACTORY' || data.building.fsec=== 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE'"
-          },
-          {
-            "title": "Is this premises in use at night for activities other than its normal business use? (i.e. community use in evening)",
-            "value": "{{ data.building.isOpenAtNight ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'FURTHER_EDUCATION' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
-          },
-          {
-            "title": "Is there domestic accommodation above this property?",
-            "value": "{{ data.building.isBelowDomestic ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'FACTORY' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'OFFICE' || data.building.fsec === 'OTHER_WORKPLACE' || data.building.fsec === 'PUBLIC_BUILDING_OTHER' || data.building.fsec === 'SCHOOL' || data.building.fsec === 'SHOP'"
-          },
-          {
-            "title": "QAA score",
-            "value": "{{ data.building.qaaScore }}",
-            "choices": [
-              {
-                "title": "Commended",
-                "value": "COMMENDED"
-              },
-              {
-                "title": "Meets UK expectation",
-                "value": "MEETS_UK_EXPECTATION"
-              },
-              {
-                "title": "Requires improvement",
-                "value": "REQUIRES_IMPROVEMENT"
-              },
-              {
-                "title": "Does not meet UK expectation",
-                "value": "DOES_NOT_MEET_UK_EXPECTATION"
-              },
-              {
-                "title": "I don't know",
-                "value": "I_DO_NOT_KNOW"
-              }
-            ],
-            "showWhen": "data.building.fsec === 'FURTHER_EDUCATION'"
-          },
-          {
-            "title": "OFSTED rating",
-            "value": "{{ data.building.ofstedScore }}",
-            "choices": [
-              {
-                "title": "Better than good",
-                "value": "BETTER_THAN_GOOD"
-              },
-              {
-                "title": "Good",
-                "value": "GOOD"
-              },
-              {
-                "title": "Less than good",
-                "value": "LESS_THAN_GOOD"
-              },
-              {
-                "title": "Special Measures",
-                "value": "SPECIAL_MEASURES"
-              },
-              {
-                "title": "I don't know",
-                "value": "I_DO_NOT_KNOW"
-              }
-            ],
-            "showWhen": "data.building.fsec === 'SCHOOL'"
-          },
-          {
-            "title": "The Care Quality Commission score for the property",
-            "value": "{{ data.building.cqcScore }}",
-            "choices": [
-              {
-                "title": "Inadequate",
-                "value": "INADEQUATE"
-              },
-              {
-                "title": "Needs Improvement",
-                "value": "IMPROVE"
-              },
-              {
-                "title": "Good",
-                "value": "GOOD"
-              },
-              {
-                "title": "Outstanding",
-                "value": "OUTSTANDING"
-              },
-              {
-                "title": "Unknown",
-                "value": "UNKNOWN"
-              },
-              {
-                "title": "Exempt",
-                "value": "EXEMPT"
-              },
-              {
-                "title": "I don't know",
-                "value": "I_DO_NOT_KNOW"
-              }
-            ],
-            "showWhen": "!(data.building.fsec === 'CONVERTED_FLAT' || data.building.fsec === 'FLAT' || data.building.fsec === 'HMO' || data.building.fsec === 'HOTEL' || data.building.fsec === 'LICENSED_PREMISE' || data.building.fsec === 'PUBLIC_BUILDING')"
-          },
-          {
-            "title": "The Food Standards Agency score for the property",
-            "value": "{{ data.building.fsaScore }}",
-            "choices": [
-              {
-                "title": "1 Star",
-                "value": "1"
-              },
-              {
-                "title": "2 Stars",
-                "value": "2"
-              },
-              {
-                "title": "3 Stars",
-                "value": "3"
-              },
-              {
-                "title": "4 Stars",
-                "value": "4"
-              },
-              {
-                "title": "5 Stars",
-                "value": "5"
-              },
-              {
-                "title": "Exempt",
-                "value": "Exempt"
-              },
-              {
-                "title": "I don't know",
-                "value": "I_DO_NOT_KNOW"
-              }
-            ],
-            "showWhen": "!(data.building.fsec === 'HMO' || data.building.fsec === 'FLAT' || data.building.fsec === 'CONVERTED_FLAT')"
-          },
-          {
-            "title": "LHA Order",
-            "value": "{{ data.building.lhaOrder ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'FLAT'"
-          },
-          {
-            "title": "Is this a heritage site?",
-            "value": "{{ data.building.heritage ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "Number of bedrooms",
-            "value": "{{ data.building.numBedrooms }}",
-            "showWhen": "data.building.fsec === 'CARE_HOME'"
-          },
-          {
-            "title": "Have WMFS Building Regs comments been ignored?",
-            "value": "{{ data.building.commentsIgnored ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "Does the property owner have building regulations consent?",
-            "value": "{{ data.building.hasBuildingRegConsent ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "Indicators that the business is in financial difficulty?",
-            "value": "{{ data.building.anyFinancialDifficulties ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "Should this HMO be licensed?",
-            "value": "{{ data.building.shouldBeLicensed ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'HMO'"
-          },
-          {
-            "title": "Does the HMO have a license?",
-            "value": "{{ data.building.isHmoLicensed ? 'Yes' : 'No' }}",
-            "showWhen": "data.building.fsec === 'HMO' && data.building.shouldBeLicensed === true"
-          },
-          {
-            "title": "Is the Fire Alarm of better standard than required?",
-            "value": "{{ data.building.hasFireAlarm ? 'Yes' : 'No' }}"
-          },
-          {
-            "title": "How suitable do you think the compartmentation is?",
-            "value": "{{ data.building.compartmentation }}",
-            "choices": {
-              "$tymlyRef": "function:wmfs_propertyDetailFormat:compartmentation"
-            }
-          },
-          {
-            "title": "Organisation Email",
-            "value": "{{ data.building.organisationEmail }}"
+            "type": "TextBlock",
+            "showWhen": "!data.building",
+            "text": "No building record for this property"
           }
         ]
-      },
-      {
-        "type": "TextBlock",
-        "showWhen": "!data.building",
-        "text": "No building record for this property"
       }
-    ]
-  }
+    }
+  ]
 }
