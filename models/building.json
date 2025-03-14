@@ -79,6 +79,12 @@
     "publicDefib": {
       "type": "boolean"
     },
+    "smokeHeatDetectorsKnown": {
+      "type": "boolean"
+    },
+    "smokeHeatDetectorsNum": {
+      "type": "integer"
+    },
     "qaaScore": {
       "type": "string"
     },

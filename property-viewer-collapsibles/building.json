@@ -138,6 +138,10 @@
             "value": "{{ data.building.publicDefib ? 'Yes' : 'No' }}"
           },
           {
+            "title": "How many smoke/heat detectors are in the premises?",
+            "value": "{{ data.building.smokeHeatDetectorsKnown ? data.building.smokeHeatDetectorsNum : 'Unknown'"
+          },
+          {
             "title": "What is the approximate sprinkler coverage?",
             "value": "{{ data.building.sprinklerCoverage }}",
             "choices": [
