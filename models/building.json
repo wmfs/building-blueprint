@@ -120,6 +120,24 @@
     },
     "organisationEmail": {
       "type": "string"
+    },
+    "numFlatsKnown": {
+      "type": "boolean"
+    },
+    "numFlats": {
+      "type": "integer"
+    },
+    "externalWallRisk": {
+      "type": "string"
+    },
+    "hasBac": {
+      "type": "string"
+    },
+    "evacStrat": {
+      "type": "string"
+    },
+    "singleStaircase": {
+      "type": "boolean"
     }
   }
 }
