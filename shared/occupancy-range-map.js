@@ -4,7 +4,10 @@ const RangeMap = {
     'SHOP',
     'PUBLIC_BUILDING_OTHER',
     'FACTORY',
-    'OTHER_WORKPLACE'
+    'OTHER_WORKPLACE',
+    'FLAT',
+    'CONVERTED_FLAT',
+    'HMO'
   ],
   largeRangedFsec: [
     'HOSPITAL',
