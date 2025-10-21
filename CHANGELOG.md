@@ -1,3 +1,11 @@
+## [1.14.0](https://github.com/wmfs/building-blueprint/compare/v1.13.0...v1.14.0) (2025-10-21)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency semantic-release to v25 ([#936](https://github.com/wmfs/building-blueprint/issues/936)) ([c4249d4](https://github.com/wmfs/building-blueprint/commit/c4249d41de5520778c735fd72547ede1c3066349))
+* **deps-dev:** update dependency semantic-release to v25.0.1 ([#937](https://github.com/wmfs/building-blueprint/issues/937)) ([9751c7d](https://github.com/wmfs/building-blueprint/commit/9751c7d89af7f3ae2a102c3586b945e1fc16c36f))
+* **deps:** revert chai to non-esm ([5687394](https://github.com/wmfs/building-blueprint/commit/5687394c9e66347f0fc88b0ee49d87b2f3cd7c8a))
+
 ## [1.13.0](https://github.com/wmfs/building-blueprint/compare/v1.12.0...v1.13.0) (2025-10-14)
 
 ### New Feature(s) :rocket:
